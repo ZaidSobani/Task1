@@ -1,0 +1,16 @@
+
+.footer {
+    background-color: #f4f4f4;
+    color:#707070 ;
+    width: 100%;
+    height: 69.5px;
+    font: 14px 'Open Sans', sans-serif;
+    text-align: center;
+}
+.footer p {
+    position: relative;
+    top: 15px;
+}
+.footer p span {
+    color: #ed1c24;
+}

@@ -1,0 +1,338 @@
+
+.home1 {
+    position: relative;
+    background-image: url(../Home/Home_Images/cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 619.31px;
+}
+.home1::before{
+    position: absolute;
+    content: "";
+    background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8), rgba(0,0,0,0.8)) ;
+    width: 100%;
+    height: 100%;               
+}
+div.home1-1 {
+    float: left;
+    width: 50%;
+    position: relative;
+    margin-left: 120px;
+}
+div.home1-1-a {
+    margin-top: 150px;
+ }
+div.home1-1-a h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 20px;
+}
+div.home1-1-a h1 span {
+    color: #ed1c24;
+}
+
+div.home1-1-a p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+}
+div.home1-1-b {
+    margin-top: 60px;  
+}
+div.home1-1-b ul li {
+    float: left;
+    list-style-type: none;
+    border: 1px solid #f4f7fa;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+    background-color: #f4f7fa;
+    text-align: center;
+    padding: 15px  0;
+    color: #ed1c24;
+    font-size: 25px;
+    margin-right: 73px;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48 
+}
+div.home1-1-c {
+    margin-top: 17px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #f4f7fa;
+    position: relative;
+    left: -23px;
+}
+div.home1-1-c ul li {
+    float: left;
+    list-style-type: none;
+}
+ul li.home1-c-list1 {
+    padding-left: 37px;
+    padding-right: 43px;
+}
+div.home1-2 {
+    float: left;
+    width: 40%;
+    position: relative;
+    margin-top: 150px;
+}
+
+.home2 {
+    background-color: #fff;
+    background-attachment: fixed;
+    background-position: center;
+    font: 15px 'Open Sans', sans-serif;
+    color: #707070;
+    width: 100%;
+    height: 608.86px;
+}
+div.home2 h1 {
+    color: #000 ;
+    font: 36.615px 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 85px;
+}
+div.home2 h1 span {
+    color: #ed1c24;
+}
+div.home2 p {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 32px;
+}
+div.home2 ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}           
+div.home2 ul li {
+    float: left;
+    list-style-type: none;
+    border: 1px solid #f4f7fa;
+    width: 255px;
+    height: 239px;
+    box-shadow: 0 3px 20px 0 rgba(0,0,0,0.2);
+    border-radius: 24px;
+    margin: 45px 20px;
+    text-align: center;   
+}
+ul li span.home2-a {
+    font-size: 50px;
+    color: #000;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+ul li span.home2-b{
+    display: block;
+    font: 18.75px 'Montserrat', sans-serif;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: -7px;
+}
+ul li span.home2-c {
+    font: 15px 'Open Sans', sans-serif;
+    color: #707070;
+}
+div.home2 ul li.home2_hover1, div.home2 ul li.home2_hover2, div.home2 ul li.home2_hover3,
+div.home2 ul li.home2_hover4  {
+    transition: margin-top 0.25s ;
+}
+div.home2 ul li.home2_hover1:hover, div.home2 ul li.home2_hover2:hover,
+div.home2 ul li.home2_hover3:hover, div.home2 ul li.home2_hover4:hover {
+    margin-top: 20px;
+}
+
+.home3 {
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 739px;
+    color: #707070;
+    font: 15px 'Open Sans', sans-serif; 
+}
+div.home3 div h1 {
+    font: 36.615px 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #000;
+    margin-left: 121px; 
+    margin-top: 131px;
+}
+div.home3 div h1 span {
+    color: #ed1c24;
+}
+div.home3 div p {
+    margin-left: 121px;
+    margin-top: 26px;
+}
+div.home3-1 {
+    width: 50%; 
+    float: left;
+}
+div.home3-1-a ul li{
+    list-style-type: none;
+    border: 1px solid #ed1c24;
+    border-radius: 6px;
+    background-color: #ed1c24;
+    width: 27px;
+    height: 22px;
+    font-size: 40px;
+    margin: 19px 0;
+    margin-left: 95px;
+}
+div.home3-1-a ul li::after {
+    content: '\2713';
+    font-size: 15px;
+    color: #fff;
+    position: relative;
+    bottom: 27px;
+    left: 6px;
+}
+div.home3-1-b ul li {
+    list-style-type: none;
+    margin: 20.5px 0;
+    margin-left: 83px;
+    position: relative;
+    left: 50px;
+    bottom: 204px;
+}
+div.home3-2 {
+    width: 50%; 
+    float: left;
+}
+div img.home3-2-a {
+    margin-top: 106px;
+    margin-left: 110px;
+}
+
+div.home4 {
+    background-color: #fff;
+    color: #707070;
+    width: 100%;
+    height: 607.8px;
+    font: 15px 'Open Sans', sans-serif; 
+}
+div.home4-1 {
+    width: 40%; 
+    float: left;
+}
+div.home4-1 img {
+    margin-left: 130px;
+    margin-top: 85px;
+}
+div.home4-2 {
+    width: 60%; 
+    float: left;
+}
+div.home4-2 h1 {
+    color: #000;
+    font: 36.615px 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 141px;
+    margin-left: 50px;
+}
+div.home4-2 h1 span {
+    color: #ed1c24;
+}
+p.home4-2-a {
+    margin-top: 24px;
+    margin-left: 50px;
+}
+p.home4-2-b {
+    margin-top: 25px;
+    margin-left: 50px;
+}
+#para1 {
+    display: block;
+}
+#para2, #para3, #para4 {
+    display: none;
+}
+/*div.home4-3 {
+    border-right: 1px solid #ebebeb;
+}*/
+div.home4-3-a ul li {
+    list-style-type: none;
+    float: left;
+    border: 4px solid #ebebeb;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    margin: 0 45px;
+    margin-top: 20px;
+
+}
+div.home4-3-b ul li {
+    list-style-type: none;
+    float: left;
+    border-right: 1px solid #ebebeb;
+    font: 13px 'Montserrat', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 15px;
+}
+ul li.home4_name1 {
+    margin-left: 14px;
+}
+ul li.home4_name2 {
+    margin-left: 23px;
+}
+ul li.home4_name3 {
+    margin-left: 32px;
+}
+ul li.home4_name4 {
+    margin-left: 35px;
+}
+#home4_click1 {
+    background-color: #ed1c24;
+}
+
+#home4_click1, #home4_click2, #home4_click3, #home4_click4 {
+    text-align: center;
+    padding: 11px 0;
+    color: #fff;
+    font-size: 32px;
+}
+#home4_click2, #home4_click3, #home4_click4 {
+    color: #000;
+}
+#home4_click1:hover {
+    cursor: pointer;
+}
+#home4_click2:hover {
+    cursor: pointer;
+}
+#home4_click3:hover {
+    cursor: pointer;
+}
+#home4_click4:hover {
+    cursor: pointer;
+}
+
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+.home1, .home2, .home3, .home4, .footer {
+    float: left;
+}           
