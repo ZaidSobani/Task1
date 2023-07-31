@@ -1,0 +1,139 @@
+
+.faq {
+    background-color: #fff;
+    color: #707070;
+    width: 100%;
+    height: 704.05px;
+    font: 15px 'Open Sans', sans-serif;
+}
+.half_faq {
+    width: 50%;
+    float: left;
+}
+.faq img {
+    margin-top: 210px;
+    margin-left: 120px;
+}
+.faq h1 {
+    font: 36.615px 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #000;
+    margin-top: 210px;
+    margin-left: 36px;
+}
+h1 span.faq_head1_part1 {
+    color: #ed1c24;
+}
+
+div.faq ul li {
+    list-style-type: none;
+    border: 1px solid #dee2e6;
+    width: 538px;
+    height: 140px;
+    margin:20px 0 ;
+}
+
+#list1 {
+    border: none;
+    position: relative;
+    margin-bottom: -90px;
+    transition: margin-bottom 0.25s;
+} 
+#list2 {
+    border: none;
+    position: relative;
+    margin-bottom: -90px;
+    transition: margin-bottom 0.25s;
+}
+#list3 {
+    border: none;
+    position: relative;
+    margin-bottom: -90px;
+    transition: margin-bottom 0.25s;
+}
+#list4 {
+    border: none;
+    position: relative;
+    margin-bottom: -90px;
+    transition: margin-bottom 0.25s;
+}
+ul li span.faq_list {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background-color: #000;
+    padding-top: 2px;
+    padding-bottom: 34px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    
+}
+ul li span.faq_list_part1 {
+    position: relative;
+    top: 16px;
+}
+ul li span.faq_list_part1-2 {
+    color: #ed1c24; 
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+#faq_para1, #faq_para2, #faq_para3, #faq_para4 {
+    display: none;
+    padding: 0 16px;
+    margin-top: -10px;
+}
+#click1-a {
+    font-size: 20px;
+    position: relative;
+    left: 270px;
+}
+#click2-a {
+    font-size: 20px;
+    position: relative;
+    left: 211px;
+}
+#click3-a {
+    font-size: 20px;
+    position: relative;
+    left: 229px;
+}
+#click4-a {
+    font-size: 20px;
+    position: relative;
+    left: 262px;
+}
+#click1-b {
+    font-size: 20px;
+    display: none;
+    position: relative;
+    left: 265px;
+}
+#click2-b {
+    font-size: 20px;
+    display: none;
+    position: relative;
+    left: 206px;
+}
+#click3-b {
+    font-size: 20px;
+    display: none;
+    position: relative;
+    left: 224px;
+}
+#click4-b {
+    font-size: 20px;
+    display: none;
+    position: relative;
+    left: 259px;
+}
+#click1-a, #click1-b:hover, #click2-a:hover, #click2-b:hover, #click3-a:hover, 
+#click3-b:hover, #click4-a:hover, #click4-b:hover {
+    cursor: pointer;
+}
+
+
+.faq, .footer {
+    float: left;
+}
