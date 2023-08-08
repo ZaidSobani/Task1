@@ -32,7 +32,7 @@ ul.header {
      text-decoration: none;
      text-align: center;
      color: #fff;
-     padding: 20px 25px;
+     padding: 20px 20px;
  }
  ul.header li.list_logo {
      float: left;
@@ -42,5 +42,8 @@ ul.header {
      opacity: 1;
  }
  ul.header li.list1 {
-    margin-right: 100px;
+    margin-right: 65px;
+ }
+ ul.header li.list_login {
+    margin-right: 10px;
  }

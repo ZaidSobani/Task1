@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ProLex Product</title>
+        <link rel="icon" type="img/x-icon" href="../shared/images/favicon.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">       
+          
+        <link rel="stylesheet" href="../shared/header.css">
+        <link rel="stylesheet" href="../shared/footer.css">
+        <link rel="stylesheet" href="log-in.css">
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    </head>
+
+    <body>
+        <div >
+            <ul class="header">
+                <li class="list_login"><a href="../log-in/log-in.html">Log in</a></li>
+                <li class="list1"><a  href ="../contact-us/contact-us.html">Contact Us</a></li>
+                <li ><a  href ="../faq/faq.html">Faq</a></li>
+                <li ><a  href ="../product/product.html">Products</a></li>
+                <li ><a  href ="../index.html">Home</a></li>
+                <li class="list_logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
+            </ul>
+        </div> 
+        <div class="log_in" id="login_background">
+            <div class="login_container_1" id="login_container_1">
+                <p>Log in</p>
+                <form class="login_container_1_a">
+                    <input type="text" id="user" name="user" placeholder="Enter Username">
+                </form> <br>
+                <form>
+                    <input type="password" id="pass" name="pass" placeholder="Enter Password">
+                </form> <br>
+                <form >
+                    <input type="button" class="login_container_1_b" value="Log in" onclick="to_table()">
+                </form>
+            </div>
+            <div class="login_container_2" id="login_container_2">
+                <p>The username or the password is not valid</p><br>
+                <button type="button" class="login_container_2_a" onclick="close_confirm()">Ok</button>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyrights © 2019. All rights reserved by <span>ThemeTags</span></p>
+        </div>
+
+        <script src="log-in.js"></script>
+    </body>
+</html>
