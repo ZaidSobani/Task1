@@ -21,8 +21,12 @@ table, th, td {
     border: 1px solid #ed1c24;
     border-collapse: collapse;
 }
+th {
+    font-size: 18px;
+    font-weight: 600;
+}
 td {
-    word-break: break-all;
+    word-break: normal;
     overflow-wrap: break-word;
 }
 tr:nth-child(1) {
@@ -89,7 +93,24 @@ tr>:nth-child(4) {
     border-color:#ed1c24;
     cursor: pointer;
 }
-#add_0, #add_1 ,#add_2, #add_3, #add_4, #add_5, #add_6, #add_7,
+#edit_0, #edit_1, #edit_2, #edit_3, #edit_4, #edit_5, #edit_6,
+#edit_7, #edit_8, #edit_9 {
+    display: none;
+    font-size: 13px;
+    background-color: #ed1c24;
+    border: 1px solid #fff;
+    padding: 2px 6px;
+    transition: background-color 0.5s, color 0.5s,
+                border 0.5s;
+}
+#edit_0:hover, #edit_1:hover, #edit_2:hover, #edit_3:hover, #edit_4:hover, 
+#edit_5:hover, #edit_6:hover, #edit_7:hover, #edit_8:hover, #edit_9:hover {
+    background-color: #fff;
+    color: #ed1c24;
+    border-color:#ed1c24;
+    cursor: pointer;
+}
+#add_0, #add_1 , #add_2, #add_3, #add_4, #add_5, #add_6, #add_7,
 #add_8, #add_9 {
     display: none;
     position: relative;

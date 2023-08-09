@@ -22,6 +22,7 @@ document.getElementById("adding_0").onclick = function() {
     document.getElementById("ques_container").style.display = "block";
     document.getElementById("add_0").style.display = "block";
 }
+
 document.getElementById("adding_1").onclick = function() {
     document.getElementById("ques_container").style.display = "block";
     document.getElementById("add_1").style.display = "block";
@@ -58,6 +59,85 @@ document.getElementById("adding_9").onclick = function() {
     document.getElementById("ques_container").style.display = "block";
     document.getElementById("add_9").style.display = "block";
 }
+
+document.getElementById("edit_0").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_0").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_0").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_0").innerHTML;
+
+}
+document.getElementById("edit_1").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_1").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_1").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_1").innerHTML; 
+
+}
+document.getElementById("edit_2").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_2").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_2").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_2").innerHTML; 
+
+}
+document.getElementById("edit_3").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_3").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_3").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_3").innerHTML; 
+
+}
+document.getElementById("edit_4").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_4").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_4").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_4").innerHTML; 
+
+}
+document.getElementById("edit_5").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_5").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_5").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_5").innerHTML; 
+
+}
+document.getElementById("edit_6").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_6").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_6").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_6").innerHTML; 
+
+}
+document.getElementById("edit_6").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_6").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_6").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_6").innerHTML; 
+
+}
+document.getElementById("edit_7").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_7").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_7").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_7").innerHTML; 
+
+}
+document.getElementById("edit_8").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_8").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_8").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_8").innerHTML; 
+
+}
+document.getElementById("edit_9").onclick = function() {
+    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("add_9").style.display = "block";
+    document.getElementById("questions_field").value = document.getElementById("questions_output_9").innerHTML; 
+    document.getElementById("answers_field").value = document.getElementById("answers_output_9").innerHTML; 
+
+}
+
 document.getElementById("add_0").onclick = function() {
     let input1 = 0;                                                                
     let input2 = document.getElementById("questions_field").value;                    
@@ -77,7 +157,9 @@ document.getElementById("add_0").onclick = function() {
     document.getElementById("add_0").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
     document.getElementById("addRow_1").style.display = "table-row";
-    
+
+    document.getElementById("adding_0").style.display = "none";
+    document.getElementById("edit_0").style.display = "inline";    
 }
 document.getElementById("add_1").onclick = function() {
     let input1 = 1;                                                                 
@@ -98,7 +180,9 @@ document.getElementById("add_1").onclick = function() {
     document.getElementById("add_1").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
     document.getElementById("addRow_2").style.display = "table-row"
-    
+
+    document.getElementById("adding_1").style.display = "none";
+    document.getElementById("edit_1").style.display = "inline";   
 }
 document.getElementById("add_2").onclick = function() {
     let input1 = 2;
@@ -119,8 +203,10 @@ document.getElementById("add_2").onclick = function() {
 
     document.getElementById("add_2").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-    document.getElementById("addRow_3").style.display = "table-row"
+    document.getElementById("addRow_3").style.display = "table-row";
      
+    document.getElementById("adding_2").style.display = "none";
+    document.getElementById("edit_2").style.display = "inline";
 }
 document.getElementById("add_3").onclick = function() {
     let input1 = 3;
@@ -141,8 +227,10 @@ document.getElementById("add_3").onclick = function() {
 
     document.getElementById("add_3").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-    document.getElementById("addRow_4").style.display = "table-row"
-    
+    document.getElementById("addRow_4").style.display = "table-row";
+
+    document.getElementById("adding_3").style.display = "none";
+    document.getElementById("edit_3").style.display = "inline";
 }
 document.getElementById("add_4").onclick = function() {
     let input1 = 4;
@@ -163,8 +251,10 @@ document.getElementById("add_4").onclick = function() {
 
     document.getElementById("add_4").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-    document.getElementById("addRow_5").style.display = "table-row"
+    document.getElementById("addRow_5").style.display = "table-row";
 
+    document.getElementById("adding_4").style.display = "none";
+    document.getElementById("edit_4").style.display = "inline";
 }
 document.getElementById("add_5").onclick = function() {
     let input1 = 5;
@@ -184,8 +274,10 @@ document.getElementById("add_5").onclick = function() {
 
     document.getElementById("add_5").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-    document.getElementById("addRow_6").style.display = "table-row"
+    document.getElementById("addRow_6").style.display = "table-row";
 
+    document.getElementById("adding_5").style.display = "none";
+    document.getElementById("edit_5").style.display = "inline";
 }
 document.getElementById("add_6").onclick = function() {
     let input1 = 6;
@@ -205,8 +297,10 @@ document.getElementById("add_6").onclick = function() {
 
     document.getElementById("add_6").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-    document.getElementById("addRow_7").style.display = "table-row"
+    document.getElementById("addRow_7").style.display = "table-row";
 
+    document.getElementById("adding_6").style.display = "none";
+    document.getElementById("edit_6").style.display = "inline";
 }
 document.getElementById("add_7").onclick = function() {
     let input1 = 7;
@@ -226,8 +320,10 @@ document.getElementById("add_7").onclick = function() {
 
     document.getElementById("add_7").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-    document.getElementById("addRow_8").style.display = "table-row"
+    document.getElementById("addRow_8").style.display = "table-row";
 
+    document.getElementById("adding_7").style.display = "none";
+    document.getElementById("edit_7").style.display = "inline";
 }
 document.getElementById("add_8").onclick = function() {
     let input1 = 8;
@@ -247,8 +343,10 @@ document.getElementById("add_8").onclick = function() {
 
     document.getElementById("add_8").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-    document.getElementById("addRow_9").style.display = "table-row"
+    document.getElementById("addRow_9").style.display = "table-row";
 
+    document.getElementById("adding_8").style.display = "none";
+    document.getElementById("edit_8").style.display = "inline";
 }
 document.getElementById("add_9").onclick = function() {
     let input1 = 9;
@@ -268,7 +366,9 @@ document.getElementById("add_9").onclick = function() {
 
     document.getElementById("add_9").style.display = "none";
     document.getElementById("ques_container").style.display = "none";
-  
+
+    document.getElementById("adding_9").style.display = "none";
+    document.getElementById("edit_9").style.display = "inline";
 }
 
 document.getElementById("closeAdding").onclick = function() {

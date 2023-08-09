@@ -3,7 +3,7 @@
     background-color: #fff;
     color: #707070;
     width: 100%;
-    height: 1200px;
+    height: 1800px;
     font: 15px 'Open Sans', sans-serif;
 }
 .half_faq {
@@ -33,30 +33,13 @@ div.faq ul li {
     margin:30px 0 ;
 }
 
-#list1 {
+#list1, #list2, #list3, #list4, #list5, #list6, #list7,
+#list8, #list9, #list10 {
     border: none;
     position: relative;
     margin-bottom: -140px;
     transition: margin-bottom 0.25s;
 } 
-#list2 {
-    border: none;
-    position: relative;
-    margin-bottom: -140px;
-    transition: margin-bottom 0.25s;
-}
-#list3 {
-    border: none;
-    position: relative;
-    margin-bottom: -140px;
-    transition: margin-bottom 0.25s;
-}
-#list4 {
-    border: none;
-    position: relative;
-    margin-bottom: -140px;
-    transition: margin-bottom 0.25s;
-}
 ul li span.faq_list {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -79,34 +62,22 @@ ul li span.faq_list_part1-2 {
     padding-left: 20px;
     padding-right: 10px;
 }
-#faq_para1, #faq_para2, #faq_para3, #faq_para4 {
+#faq_para1, #faq_para2, #faq_para3, #faq_para4, #faq_para5, 
+#faq_para6, #faq_para7, #faq_para8, #faq_para9, #faq_para10 {
     display: none;
     padding: 0 16px;
     margin-top: -10px;
 }
-#click1-a, #click2-a, #click3-a, #click4-a {
+#click1-a, #click2-a, #click3-a, #click4-a, #click5-a, 
+#click6-a, #click7-a, #click8-a, #click9-a, #click10-a {
     color: #ed1c24;
     font-size: 20px;
     position: relative;
     left: 565px;
     bottom: 40px;
 }
-/*#click2-a {
-    font-size: 20px;
-    position: relative;
-    left: 211px;
-}
-#click3-a {
-    font-size: 20px;
-    position: relative;
-    left: 229px;
-}
-#click4-a {
-    font-size: 20px;
-    position: relative;
-    left: 262px;
-}*/
-#click1-b, #click2-b, #click3-b, #click4-b {
+#click1-b, #click2-b, #click3-b, #click4-b, #click5-b, 
+#click6-b, #click7-b, #click8-b, #click9-b, #click10-b {
     color: #ed1c24;
     font-size: 20px;
     display: none;
@@ -114,26 +85,10 @@ ul li span.faq_list_part1-2 {
     left: 565px;
     bottom: 170px;
 }
-/*#click2-b {
-    font-size: 20px;
-    display: none;
-    position: relative;
-    left: 206px;
-}
-#click3-b {
-    font-size: 20px;
-    display: none;
-    position: relative;
-    left: 224px;
-}
-#click4-b {
-    font-size: 20px;
-    display: none;
-    position: relative;
-    left: 259px;
-}*/
 #click1-a, #click1-b:hover, #click2-a:hover, #click2-b:hover, #click3-a:hover, 
-#click3-b:hover, #click4-a:hover, #click4-b:hover {
+#click3-b:hover, #click4-a:hover, #click4-b:hover, #click5-a:hover, #click5-b:hover, 
+#click6-a:hover, #click6-b:hover, #click7-a:hover, #click7-b:hover, #click8-a:hover, 
+#click8-b:hover, #click9-a:hover, #click9-b:hover, #click10-a:hover, #click10-b:hover {
     cursor: pointer;
 }
 
