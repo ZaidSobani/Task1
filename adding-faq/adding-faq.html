@@ -1,257 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>ProLex Product</title>
-        <link rel="icon" type="img/x-icon" href="../shared/images/favicon.png">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">       
-          
-        <link rel="stylesheet" href="../shared/header.css">
-        <link rel="stylesheet" href="../shared/footer.css">
-        <link rel="stylesheet" href="adding-faq.css">
 
-        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<head>
+    <title>ProLex Product</title>
+    <link rel="icon" type="img/x-icon" href="../shared/images/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
+    <link rel="stylesheet" href="../shared/header.css">
+    <link rel="stylesheet" href="../shared/footer.css">
+    <link rel="stylesheet" href="adding-faq.css">
 
-    <body>
-        <div>
-            <ul class="header">
-                <li class="list_login"><a id="log_out" href="../log-in/log-in.html">Log in</a></li>
-                <li class="list1"><a  href ="../contact-us/contact-us.html">Contact Us</a></li>
-                <li ><a  href ="../faq/faq.html">Faq</a></li>
-                <li ><a  href ="../product/product.html">Products</a></li>
-                <li ><a  href ="../index.html">Home</a></li>
-                <li class="list_logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
-            </ul>
-        </div> 
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
-        <div class="faq_table">
-            <table>
-                <tr>
-                    <th>Index</th>
-                    <th>Question</th>
-                    <th>Answer</th>
-                    <th>+</th>
-                </tr>
-                <tr>
-                    <td>
-                        <span id="index_output_0">1</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_0"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_0"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_0" name="adding_0" value="+">
-                        <input type="button" id="edit_0" name="edit_0" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_1">
-                    <td>
-                        <span id="index_output_1">2</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_1"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_1"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_1" name="adding_1" value="+">
-                        <input type="button" id="edit_1" name="edit_1" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_2">
-                    <td>
-                        <span id="index_output_2">3</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_2"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_2"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_2" name="adding_2" value="+">
-                        <input type="button" id="edit_2" name="edit_2" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_3">
-                    <td>
-                        <span id="index_output_3">4</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_3"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_3"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_3" name="adding_3" value="+">
-                        <input type="button" id="edit_3" name="edit_3" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_4">
-                    <td>
-                        <span id="index_output_4">5</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_4"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_4"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_4" name="adding_4" value="+">
-                        <input type="button" id="edit_4" name="edit_4" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_5">
-                    <td>
-                        <span id="index_output_5">6</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_5"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_5"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_5" name="adding_5" value="+">
-                        <input type="button" id="edit_5" name="edit_5" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_6">
-                    <td>
-                        <span id="index_output_6">7</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_6"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_6"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_6" name="adding_6" value="+">
-                        <input type="button" id="edit_6" name="edit_6" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_7">
-                    <td>
-                        <span id="index_output_7">8</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_7"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_7"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_7" name="adding_7" value="+">
-                        <input type="button" id="edit_7" name="edit_7" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_8">
-                    <td>
-                        <span id="index_output_8">9</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_8"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_8"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_8" name="adding_8" value="+">
-                        <input type="button" id="edit_8" name="edit_8" value="Edit">
-                    </td>
-                </tr>
-                <tr id="addRow_9">
-                    <td>
-                        <span id="index_output_9">10</span>
-                    </td>
-                    <td>
-                        <span id="questions_output_9"></span>
-                    </td>
-                    <td>
-                        <span id="answers_output_9"></span>
-                    </td>
-                    <td>
-                        <input type="button" id="adding_9" name="adding_9" value="+">
-                        <input type="button" id="edit_9" name="edit_9" value="Edit">
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div id="ques_container">
-            <div class="ques_container_1" >
-                <span class="ques_container_1_a">Index</span>
-                <span class="ques_container_1_b">
-                    <input type="text" id="index" name="index" placeholder="Enter Index">
-                </span>
-            </div>
-            <div class="ques_container_2">
-                <span class="ques_container_2_a">Question</span>
-                <span class="ques_container_2_b">
-                    <input type="text" id="questions_field" name="questions_field" placeholder="Question" 
-                    value="Which license do I need?">
-                </span>
-            </div>
-            <div class="ques_container_3">
-                <span class="ques_container_3_a">Answer</span>
-                <span class="ques_container_3_b">
-                    <input type="text" id="answers_field" name="answers_field" placeholder="Answer" value="Uniquely leverage other's 
-                    distinctive infomediaries rather than leveraged supply chains. Continually seize distributed collaboration and 
-                    idea-sharing whereas user.">
-                </span>
-            </div>
-            <div>
-                <input type="button" id="closeAdding" name="closeAdding" value="Close">
-            </div>
-            <div>
-                <input type="button" id="add_0" name="add_0" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_1" name="add_1" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_2" name="add_2" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_3" name="add_3" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_4" name="add_4" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_5" name="add_5" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_6" name="add_6" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_7" name="add_7" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_8" name="add_8" value="Add">
-            </div>
-            <div>
-                <input type="button" id="add_9" name="add_9" value="Add">
-            </div>
-        </div>
+</head>
+
+<body>
+    <div>
+        <ul class="header">
+            <li class="list_login"><a id="log_out" href="../log-in/log-in.html">Log in</a></li>
+            <li class="list1"><a href="../contact-us/contact-us.html">Contact Us</a></li>
+            <li><a href="../faq/faq.html">Faq</a></li>
+            <li><a href="../product/product.html">Products</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li class="list_logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
+        </ul>
+    </div>
+
+    <div id="faqs" style="margin-top: 100px;">
         
+    </div>
 
-        <br>
-        <div>
-            <input type="button" id="submitToFaq" value="Submit">
+    <div class="faq_table">
+        <table>
+            <tr>
+                <th>Index</th>
+                <th>Question</th>
+                <th>Answer</th>
+                <th>+</th>
+            </tr>
+            <tr>
+                <td>
+                    <span id="index_output_0">1</span>
+                </td>
+                <td>
+                    <span id="questions_output_0"></span>
+                </td>
+                <td>
+                    <span id="answers_output_0"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_0" name="adding_0" value="+">
+                    <input type="button" id="edit_0" name="edit_0" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_1">
+                <td>
+                    <span id="index_output_1">2</span>
+                </td>
+                <td>
+                    <span id="questions_output_1"></span>
+                </td>
+                <td>
+                    <span id="answers_output_1"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_1" name="adding_1" value="+">
+                    <input type="button" id="edit_1" name="edit_1" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_2">
+                <td>
+                    <span id="index_output_2">3</span>
+                </td>
+                <td>
+                    <span id="questions_output_2"></span>
+                </td>
+                <td>
+                    <span id="answers_output_2"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_2" name="adding_2" value="+">
+                    <input type="button" id="edit_2" name="edit_2" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_3">
+                <td>
+                    <span id="index_output_3">4</span>
+                </td>
+                <td>
+                    <span id="questions_output_3"></span>
+                </td>
+                <td>
+                    <span id="answers_output_3"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_3" name="adding_3" value="+">
+                    <input type="button" id="edit_3" name="edit_3" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_4">
+                <td>
+                    <span id="index_output_4">5</span>
+                </td>
+                <td>
+                    <span id="questions_output_4"></span>
+                </td>
+                <td>
+                    <span id="answers_output_4"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_4" name="adding_4" value="+">
+                    <input type="button" id="edit_4" name="edit_4" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_5">
+                <td>
+                    <span id="index_output_5">6</span>
+                </td>
+                <td>
+                    <span id="questions_output_5"></span>
+                </td>
+                <td>
+                    <span id="answers_output_5"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_5" name="adding_5" value="+">
+                    <input type="button" id="edit_5" name="edit_5" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_6">
+                <td>
+                    <span id="index_output_6">7</span>
+                </td>
+                <td>
+                    <span id="questions_output_6"></span>
+                </td>
+                <td>
+                    <span id="answers_output_6"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_6" name="adding_6" value="+">
+                    <input type="button" id="edit_6" name="edit_6" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_7">
+                <td>
+                    <span id="index_output_7">8</span>
+                </td>
+                <td>
+                    <span id="questions_output_7"></span>
+                </td>
+                <td>
+                    <span id="answers_output_7"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_7" name="adding_7" value="+">
+                    <input type="button" id="edit_7" name="edit_7" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_8">
+                <td>
+                    <span id="index_output_8">9</span>
+                </td>
+                <td>
+                    <span id="questions_output_8"></span>
+                </td>
+                <td>
+                    <span id="answers_output_8"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_8" name="adding_8" value="+">
+                    <input type="button" id="edit_8" name="edit_8" value="Edit">
+                </td>
+            </tr>
+            <tr id="addRow_9">
+                <td>
+                    <span id="index_output_9">10</span>
+                </td>
+                <td>
+                    <span id="questions_output_9"></span>
+                </td>
+                <td>
+                    <span id="answers_output_9"></span>
+                </td>
+                <td>
+                    <input type="button" id="adding_9" name="adding_9" value="+">
+                    <input type="button" id="edit_9" name="edit_9" value="Edit">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ques_container">
+        <div class="ques_container_1">
+            <span class="ques_container_1_a">Index</span>
+            <span class="ques_container_1_b">
+                <input type="text" id="index" name="index" placeholder="Enter Index">
+            </span>
         </div>
+        <div class="ques_container_2">
+            <div class="ques_container_2_a">Question</div>
+            <div class="ques_container_2_b faq-input-container">
+                <input type="text" id="questions_field" name="questions_field" placeholder="Question"
+                    value="Which license do I need?" class="faq-input">
+            </div>
+        </div>
+        <div class="ques_container_3">
+            <div class="ques_container_3_a">Answer</div>
+            <div class="ques_container_3_b faq-input-container">
+                <input type="text" id="answers_field" name="answers_field" placeholder="Answer"
+                    value="Uniquely leverage other's distinctive infomediaries rather than leveraged supply chains. Continually seize distributed collaboration and idea-sharing whereas user."
+                    class="faq-input">
+            </div>
+        </div>
+        <div>
+            <input type="button" id="closeAdding" name="closeAdding" value="Close">
+        </div>
+        <div>
+            <input type="button" id="addFaq" name="addFaq" value="Add" onclick="createFaq()">
+        </div>
+    </div>
 
-        <script src="adding-faq.js"></script>
-        
-    </body>
+
+    <br>
+    <div>
+        <input type="button" id="submitToFaq" value="Submit">
+    </div>
+
+    <script src="adding-faq.js"></script>
+
+</body>
 
 </html>
