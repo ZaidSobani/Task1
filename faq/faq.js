@@ -235,7 +235,7 @@ document.getElementById("click4-b").onclick = function () {
     document.getElementById("list4").style.border = "none"
     document.getElementById("list4").style.marginBottom = "-140px"
 }
-document.getElementById("click5-a").onclick = function () {
+/*document.getElementById("click5-a").onclick = function () {
     document.getElementById("faq_para5").style.display = "block"
     document.getElementById("faq_para1").style.display = "none"
     document.getElementById("faq_para2").style.display = "none"
@@ -588,19 +588,19 @@ document.getElementById("click10-b").onclick = function () {
     document.getElementById("click10-b").style.display = "none"
     document.getElementById("list10").style.border = "none"
     document.getElementById("list10").style.marginBottom = "-140px"
-}
+}*/
 
 window.onload = function () {
 
     let faqs = JSON.parse(localStorage.getItem("faqs"));
-    
+    console.log(faqs)
+    const faqOutput = document.getElementById("faqsOutput");
 
-    const faqsDiv = document.getElementById('faqs');
-
-    for (let i = 0; i < faqs.length; i++) {
-
-        faqsDiv.innerHTML = faqsDiv.innerHTML + '<div><span>-' + (i+1) + '-</span><span>' + faqs[i].question + '</span><span>' + faqs[i].answer + '</span></div>';
+    for(let i = 0; i < faqs.length; i++) {
+        faqOutput.innerHTML = faqOutput.innerHTML + "<div><span>-" + (i+1) + "-</span><span>" + 
+        faqs[i].question + "</span><span>" + faqs[i].answer + "</span></div>"; 
     }
+}
 
 
     // let faq_template_after = JSON.parse(localStorage.getItem("faqArray"));
@@ -634,7 +634,7 @@ window.onload = function () {
     // document.getElementById("faq_index10").innerHTML = faq_template_after[9].index + 1;
     // document.getElementById("faq_ques10").innerHTML = faq_template_after[9].questions;
     // document.getElementById("faq_para10").innerHTML = faq_template_after[9].answers;
-}
+
 
 
 
