@@ -46,11 +46,11 @@ function createFaq() {
         faqs[i].question + "</span><span>" + faqs[i].answer + "</span></div>"; 
     }*/
     faqOutput.innerHTML = faqOutput.innerHTML + "<tr id='test12' class='faqTable2'><td><span>" +faqs.length + 
-    "</span></td><td><span id='test12_a'>" + faqs[faqs.length - 1].question + 
-    "</span></td><td><span id='test12_b'>" + faqs[faqs.length - 1].answer + 
+    "</span></td><td><span id='test13.id'>" + faqs[faqs.length - 1].question + 
+    "</span></td><td><span id='test13_id'>" + faqs[faqs.length - 1].answer + 
     "</span></td><td><span><button onclick='edit("+ indexOfId() +")'>" + 
     "Edit" + "</button></span></td></tr>";
-    
+
     //faqOutput.appendChild(document.createElement("tr"));
 
     localStorage.setItem("faqs", JSON.stringify(faqs));
@@ -66,6 +66,7 @@ function createFaq() {
             return test13.id;
         }
     }    
+    console.log(indexOfId());
 
     
     document.getElementById("questions_field").value = "";
