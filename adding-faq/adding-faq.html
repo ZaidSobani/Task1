@@ -29,7 +29,7 @@
     </div>
 
     <div id="faqs">
-        <table class="faqTable1" id="bottomBorder">
+        <table class="faqTable1" id="faqTable1">
             <tr>
                 <th>Index</th>
                 <th>Question</th>
@@ -37,9 +37,6 @@
                 <th>
                     <input type="button" value="+" class="addFaq" onclick="addFaq()">
                 </th>
-            </tr>
-            <tr id="test11"> 
-
             </tr>
         </table>
     </div>
@@ -61,7 +58,10 @@
             <input type="button" class="closeAdding" value="Close" onclick="closeFaq()">
         </div>
         <div>
-            <input type="button" class="addToTable" value="Add" onclick="createFaq()">
+            <input type="button" class="addToTable" id="addToTable" value="Add" onclick="createFaq()">
+        </div>
+        <div>
+            <input type="button" class="editTable" id="editTable" value="Update" onclick="editFaq()">
         </div>
     </div>
 

@@ -23,9 +23,14 @@ window.onload = function() {
 function addFaq() {
     document.getElementById("ques_container").style.display = "block";
     document.getElementById("addToTable").style.display = "block";
+    document.getElementById("editTable").style.display = "none";
+
 }
 function edit() {
     document.getElementById("ques_container").style.display = "block";
+    document.getElementById("addToTable").style.display = "none";
+    document.getElementById("editTable").style.display = "block";
+    console.log(test13.id);
     document.getElementById("questions_field").value = faqs[faqs.length - 1].question;
     document.getElementById("answers_field").value = faqs[faqs.length - 1].answer;
 }
@@ -35,29 +40,54 @@ function createFaq() {
 
     faqs.push({question:input1, answer:input2});
 
-    const faqOutput = document.getElementById("faqs");
+    const faqOutput = document.getElementById("faqTable1");
     /*for(let i=0; i<faqs.length; i++) {
         faqOutput.innerHTML = faqOutput.innerHTML + "<div><span>-" + (i+1) + "-</span><span>" + 
         faqs[i].question + "</span><span>" + faqs[i].answer + "</span></div>"; 
     }*/
-    faqOutput.innerHTML = faqOutput.innerHTML + "<table class='faqTable2'><tr><td style='border-top:none'><span>" +
-    faqs.length + "</span></td><td style='border-top:none'><span id=''>" + faqs[faqs.length - 1].question + 
-    "</span></td><td style='border-top:none'><span>" + faqs[faqs.length - 1].answer + 
-    "</span></td><td style='border-top:none'><span><button onclick='edit("+ faqs.indexOf(faqs.length) +")'>" + 
-    "Edit" + "</button></span></td></tr></table>";
+    faqOutput.innerHTML = faqOutput.innerHTML + "<tr id='test12' class='faqTable2'><td><span>" +faqs.length + 
+    "</span></td><td><span id='test12_a'>" + faqs[faqs.length - 1].question + 
+    "</span></td><td><span id='test12_b'>" + faqs[faqs.length - 1].answer + 
+    "</span></td><td><span><button onclick='edit("+ indexOfId() +")'>" + 
+    "Edit" + "</button></span></td></tr>";
     
-    faqOutput.appendChild(document.createElement("tr"));
+    //faqOutput.appendChild(document.createElement("tr"));
 
     localStorage.setItem("faqs", JSON.stringify(faqs));
-    for(let j = 0; j < faqs.length; j++) {
-        id = "ques" + j;
-    }
+
+    
+    function indexOfId() {
+        // id = "ques" +faqs.indexOf(faqs[faqs.length]);
+        var test131 = document.getElementsByTagName("tr");
+        for (let j= 0; j < test131.length; j++) {
+            var test13 = test131[j];
+            test13.setAttribute("id", j + 1);
+            test13.id = j+1;
+            return test13.id;
+        }
+    }    
+
+    
     document.getElementById("questions_field").value = "";
     document.getElementById("answers_field").value = "";
     document.getElementById("ques_container").style.display = "none";
 
     //document.getElementById("bottomBorder").style.borderBottom = "none";    
 }
+function editFaq() {
+    let input1 = document.getElementById("questions_field").value;
+    let input2 = document.getElementById("answers_field").value;
+
+    faqs.push({question:input1, answer:input2});
+
+    document.getElementById("test12_a").innerHTML = document.getElementById("questions_field").value;
+    document.getElementById("test12_b").innerHTML = document.getElementById("answers_field").value
+
+    document.getElementById("questions_field").value = "";
+    document.getElementById("answers_field").value = "";
+    document.getElementById("ques_container").style.display = "none";
+}
+
 function closeFaq() {
     document.getElementById("ques_container").style.display = "none";
     document.getElementById("addToTable").style.display = "none";

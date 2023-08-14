@@ -22,7 +22,6 @@ th {
     border: 1px solid #000;
     border-collapse: collapse;
     transition: border-bottom 0s;
-    border-bottom: none;
 }
 td {
     border: 1px solid #000;
