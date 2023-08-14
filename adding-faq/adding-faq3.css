@@ -1,0 +1,6 @@
+.faq-row{
+    border: 1px black solid;
+    padding: 5px;
+    margin-bottom: 1px;
+    cursor: pointer;
+}
