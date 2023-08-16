@@ -27,19 +27,15 @@ h1 span.faq_head1_part1 {
 
 div.faq ul li {
     list-style-type: none;
-    border: 1px solid #dee2e6;
+    border: none;
     width: 538px;
     height: 200px;
-    margin:30px 0 ;
 }
-
-#list1, #list2, #list3, #list4, #list5, #list6, #list7,
-#list8, #list9, #list10 {
+.list {
     border: none;
-    position: relative;
-    margin-bottom: -140px;
+    margin-bottom: -100px;
     transition: margin-bottom 0.25s;
-} 
+}
 ul li span.faq_list {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -47,10 +43,10 @@ ul li span.faq_list {
     background-color: #000;
     padding-top: 2px;
     padding-bottom: 45px;
+    padding-right: 35px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     display: flex;
-    
 }
 ul li span.faq_list_part1 {
     position: relative;
@@ -62,33 +58,30 @@ ul li span.faq_list_part1-2 {
     padding-left: 20px;
     padding-right: 10px;
 }
-#faq_para1, #faq_para2, #faq_para3, #faq_para4, #faq_para5, 
-#faq_para6, #faq_para7, #faq_para8, #faq_para9, #faq_para10 {
+.faqPara {
     display: none;
     padding: 0 16px;
-    margin-top: -10px;
+    margin-top: -10px; 
 }
-#click1-a, #click2-a, #click3-a, #click4-a, #click5-a, 
-#click6-a, #click7-a, #click8-a, #click9-a, #click10-a {
+.clickA {
     color: #ed1c24;
     font-size: 20px;
     position: relative;
-    left: 565px;
-    bottom: 40px;
+    left: 500px;
+    bottom: 84px;
 }
-#click1-b, #click2-b, #click3-b, #click4-b, #click5-b, 
-#click6-b, #click7-b, #click8-b, #click9-b, #click10-b {
+.clickA:hover {
+    cursor: pointer;
+}
+.clickB {
     color: #ed1c24;
     font-size: 20px;
     display: none;
     position: relative;
-    left: 565px;
-    bottom: 170px;
+    left: 500px;
+    bottom: 184px;
 }
-#click1-a, #click1-b:hover, #click2-a:hover, #click2-b:hover, #click3-a:hover, 
-#click3-b:hover, #click4-a:hover, #click4-b:hover, #click5-a:hover, #click5-b:hover, 
-#click6-a:hover, #click6-b:hover, #click7-a:hover, #click7-b:hover, #click8-a:hover, 
-#click8-b:hover, #click9-a:hover, #click9-b:hover, #click10-a:hover, #click10-b:hover {
+.clickB:hover {
     cursor: pointer;
 }
 
