@@ -101,15 +101,18 @@ function editFaq() {
 }
 
 function removeFaq(removeIndex) {
-    const faq =faqs[removeIndex];
     
-    const rowNumber = document.getElementById("faq-" + faq.ids);
+    var faqIndex = faqs.findIndex(test => test.removeIndex === 0);
+    
+
+    const faq =faqs[faqIndex];
+    
+    const rowNumber = document.getElementById("faq-" + removeIndex);
     rowNumber.remove()
     
-    const idsS = faq.ids;
+    //const idsS = faq.ids;
 
     
-    var faqIndex = faqs.findIndex(test => test.ids === idsS);
     faqs.splice(faqIndex, 1);
     console.log(faqIndex)
     
@@ -129,7 +132,7 @@ function buildFaqHtml(faq, index) {
 function buildFaqInnerHtml(faq, index) {
     return "<td><span>" + (index + 1) + "</span></td><td><span>" + faq.question + "</span></td><td><span>" + faq.answer + 
     "</span></td><td><span><button class='editFaq' onclick='edit("+ index +")'>" + "Edit" + 
-    "</button></span></td><td><span><button class='removeFaq' onclick='removeFaq("+ index +")'><span class='material-symbols-outlined'>" + 
+    "</button></span></td><td><span><button class='removeFaq' onclick='removeFaq("+ faq.ids +")'><span class='material-symbols-outlined'>" + 
     "delete" + "</span></button></span></td>"; 
 }
 
