@@ -1,33 +1,42 @@
 
 var faqs;
 
-window.onload = function toFaqs() {
+window.onload = function () {
 
     faqs = JSON.parse(localStorage.getItem("faqs"));
     //console.log(faqs)
 
     const faqOutput = document.getElementById("faqOutput");
     for(let i = 0; i < faqs.length; i++) {
-        faqOutput.innerHTML += "<li class='list' id='list-" + (i + 1) + 
-        "' ><span class='faq_list'><span class='faq_list_part1'><span class='faq_list_part1-2'>" +
-        (i + 1) + "</span><span>" + faqs[i].question + "</span></span></span><br><span class='faqPara' id='faq_para-" + 
-        (i + 1) + "'>" + faqs[i].answer + "</span></li><span class='clickA' id='clickA-" + (i + 1) +"'>" + "+" + 
-        "</span><span class='clickB' id='clickB-" + (i + 1) + "'>" + "-" + "</span>";
+         
+        faqOutput.innerHTML += "<div id='faqsOutput-" + (i+1) + "'><li class='list' id='list-" + (i + 1) + 
+        "' ><span class='faq-list'><span class='faq-list-1'><span class='faq-list-1-a'>" +
+        (i + 1) + "</span><span>" + faqs[i].question + "</span></span></span><br><span class='faq-answer' id='faqAnswer-" + 
+        (i + 1) + "'>" + faqs[i].answer + "</span></li><span class='click-a' id='clickA-" + (i + 1) +"'>" + "+" + 
+        "</span><span class='click-b' id='clickB-" + (i + 1) + "'>" + "-" + "</span></div>";
+        
+        if(faqs[i].published == true) {
+            document.getElementById("faqsOutput-" + (i + 1)).style.display = "block"
+        }
+        else {
+            document.getElementById("faqsOutput-" + (i + 1)).style.display = "none"
+        }
     }
+    
     displayFaq();    
 }
 
 function displayFaq() {
     for(let j = 0;j < faqs.length; j++) {
         document.getElementById("clickA-" + (j + 1)).onclick = function () {
-            document.getElementById("faq_para-" + (j + 1)).style.display = "block";
+            document.getElementById("faqAnswer-" + (j + 1)).style.display = "block";
             document.getElementById("clickA-" + (j + 1)).style.display = "none";
             document.getElementById("clickB-" + (j + 1)).style.display = "inline";
             document.getElementById("list-" + (j + 1)).style.border = "1px solid #dee2e6";
             document.getElementById("list-" + (j + 1)).style.marginBottom = "0px";
             for(let k = 0; k < faqs.length; k++) {
                 if (k != j) {
-                    document.getElementById("faq_para-" + (k + 1)).style.display = "none";
+                    document.getElementById("faqAnswer-" + (k + 1)).style.display = "none";
                     document.getElementById("clickA-" + (k + 1)).style.display = "inline";
                     document.getElementById("clickB-" + (k + 1)).style.display = "none";
                     document.getElementById("list-" + (k + 1)).style.border = "none";
@@ -36,7 +45,7 @@ function displayFaq() {
             }
         }
         document.getElementById("clickB-" + (j + 1)).onclick = function () {
-            document.getElementById("faq_para-" + (j + 1)).style.display = "none";
+            document.getElementById("faqAnswer-" + (j + 1)).style.display = "none";
             document.getElementById("clickA-" + (j + 1)).style.display = "inline";
             document.getElementById("clickB-" + (j + 1)).style.display = "none";
             document.getElementById("list-" + (j + 1)).style.border = "none";

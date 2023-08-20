@@ -34,16 +34,16 @@ ul.header {
      color: #fff;
      padding: 20px 20px;
  }
- ul.header li.list_logo {
+ ul.header li.list-logo {
      float: left;
      position: relative;
      top: 15px;
      left: 121px;
      opacity: 1;
  }
- ul.header li.list1 {
+ ul.header li.list-contact-us {
     margin-right: 65px;
  }
- ul.header li.list_login {
+ ul.header li.list-login {
     margin-right: 10px;
  }

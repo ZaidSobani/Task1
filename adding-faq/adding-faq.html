@@ -20,50 +20,71 @@
 <body>
     <div>
         <ul class="header">
-            <li class="list_login"><a id="log_out" href="../log-in/log-in.html">Log in</a></li>
-            <li class="list1"><a href="../contact-us/contact-us.html">Contact Us</a></li>
+            <li class="list-login"><a href="../log-in/log-in.html">Log in</a></li>
+            <li class="list-contact-us"><a href="../contact-us/contact-us.html">Contact Us</a></li>
             <li><a href="../faq/faq.html">Faq</a></li>
             <li><a href="../product/product.html">Products</a></li>
             <li><a href="../index.html">Home</a></li>
-            <li class="list_logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
+            <li class="list-logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
         </ul>
     </div>
 
     <div id="faqs">
-        <table class="faqTable1" id="faqTable1">
+        <table id="faqTable" class="faq-table">
             <tr>
-                <th>Index</th>
                 <th>Question</th>
                 <th>Answer</th>
                 <th>
-                    <input type="button" value="+" class="addFaq" onclick="addFaq()">
+                    <input type="button" value="+" class="add-faq" onclick="addFaq()">
                 </th>
             </tr>
         </table>
     </div>
 
-    <div id="ques_container" class="ques_container">
-        <div class="ques_container_1">
-            <div class="ques_container_1_a">Question</div>
-            <div class="ques_container_1_b faq-input-container">
-                <input type="text" id="questions_field" placeholder="Question">
+    <div id="container">
+        <div id="questionContainer" class="question-container">
+            <div class="question-container-1">
+                <div class="question-container-1-a">Question</div>
+                <div class="question-container-1-b">
+                    <input type="text" id="questionField" placeholder="Question">
+                </div>
             </div>
-        </div>
-        <div class="ques_container_2">
-            <div class="ques_container_2_a">Answer</div>
-            <div class="ques_container_2_b faq-input-container">
-                <input type="text" id="answers_field" placeholder="Answer" >
+            <div class="question-container-2">
+                <div class="question-container-2-a">Answer</div>
+                <div class="question-container-2-b">
+                    <input type="text" id="answerField" placeholder="Answer" >
+                </div>
             </div>
+            <div>
+                <input type="button" class="close-adding" value="Close" onclick="closeFaq()">
+            </div>
+            <div>
+                <input type="button" id="addToTable" class="add-to-table"  value="Add" onclick="createValidation()">
+                <input type="button" id="editTable" class="edit-table"  value="Update" onclick="updateValidation()">
+            </div>
+            <span>
+                <select id="mySelect" class="my-select">
+                    <option class="myOption" value="publish">Publish</option>
+                    <option class="myOption" value="unpublish">Unpublish</option>
+                </select>
+            </span>
         </div>
         <div>
-            <input type="button" class="closeAdding" value="Close" onclick="closeFaq()">
-        </div>
-        <div>
-            <input type="button" class="addToTable" id="addToTable" value="Add" onclick="createFaq()">
-            <input type="button" class="editTable" id="editTable" value="Update" onclick="editFaq()">
+            <div id="publishValidation" class="publish-validation">
+                <p>Are you sure you want to publish it ?</p>
+                <button type="button" id="createPublishedFaq" class="create-published-faq" onclick="createFaq()">Yes</button>
+                <button type="button" id="updatePublishedFaq" class="update-published-faq" onclick="editFaq()">Yes</button>
+                <button type="button" class="return-to-container" onclick="returnToContainer()">No</button>
+            </div> 
+            <div id="unpublishValidation" class="unpublish-validation">
+                <p>Are you sure you don't want to publish it ?</p>
+                <button type="button" id="createUnpublishedFaq" class="create-unpublished-faq" onclick="createFaq()">Yes</button>
+                <button type="button" id="updateUnpublishedFaq" class="update-unpublished-faq" onclick="editFaq()">Yes</button>
+                <button type="button" class="return-to-container" onclick="returnToContainer()">No</button>
+            </div> 
         </div>
     </div>
-
+    
 
     <script src="adding-faq.js"></script>
 

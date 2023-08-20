@@ -6,7 +6,7 @@
     height: 1800px;
     font: 15px 'Open Sans', sans-serif;
 }
-.half_faq {
+.half-faq {
     width: 50%;
     float: left;
 }
@@ -21,7 +21,7 @@
     margin-top: 210px;
     margin-left: 36px;
 }
-h1 span.faq_head1_part1 {
+h1 span.faq-heading {
     color: #ed1c24;
 }
 
@@ -36,7 +36,7 @@ div.faq ul li {
     margin-bottom: -100px;
     transition: margin-bottom 0.25s;
 }
-ul li span.faq_list {
+ul li span.faq-list {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #fff;
@@ -48,32 +48,32 @@ ul li span.faq_list {
     border-top-right-radius: 4px;
     display: flex;
 }
-ul li span.faq_list_part1 {
+ul li span.faq-list-1 {
     position: relative;
     top: 16px;
 }
-ul li span.faq_list_part1-2 {
+ul li span.faq-list-1-a {
     color: #ed1c24; 
     font-size: 18px;
     padding-left: 20px;
     padding-right: 10px;
 }
-.faqPara {
+.faq-answer {
     display: none;
     padding: 0 16px;
     margin-top: -10px; 
 }
-.clickA {
+.click-a {
     color: #ed1c24;
     font-size: 20px;
     position: relative;
     left: 500px;
     bottom: 84px;
 }
-.clickA:hover {
+.click-a:hover {
     cursor: pointer;
 }
-.clickB {
+.click-b {
     color: #ed1c24;
     font-size: 20px;
     display: none;
@@ -81,7 +81,7 @@ ul li span.faq_list_part1-2 {
     left: 500px;
     bottom: 184px;
 }
-.clickB:hover {
+.click-b:hover {
     cursor: pointer;
 }
 

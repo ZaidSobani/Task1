@@ -3,7 +3,7 @@
     font: 15px 'Open Sans', sans-serif;
     color: #000;
 }
-.faqTable1 {
+.faq-table {
     margin-top: 150px;
     width: 85%;
     margin-left: auto;
@@ -28,28 +28,24 @@ td {
     word-break: normal;
     overflow-wrap: break-word;
 }
-tr:nth-child(1) {
-    border: 1px solid #fff;
-}
 tr>:nth-child(1) {
-    width: 5%;
-    text-align: center;
+    width: 45%;
 }
 tr>:nth-child(2) {
-    width: 44%;
+    width: 45%;
 }
 tr>:nth-child(3) {
-    width: 44%;
+    width: 4%;
 }
 tr>:nth-child(4) {
-    width: 4%;
+    width: 3%;
     text-align: center;
 }
 tr>:nth-child(5) {
     width: 3%;
     text-align: center;
 }
-.ques_container {
+.question-container {
     display: none;
     width: 500px;
     height: 330px;
@@ -60,23 +56,23 @@ tr>:nth-child(5) {
     left: 392px;
 
 }
-.ques_container_1, .ques_container_2 {
+.question-container-1, .question-container-2 {
     margin: 26px 21px;
 }
-.ques_container_1_a, .ques_container_2_a {
+.question-container-1-a, .question-container-2-a {
     font-size: 22px;
     margin-bottom: 10px;
 }
-.ques_container_2_a {
+.question-container-2-a {
     margin-top: -10px;
 }
-.ques_container_1_b input, .ques_container_2_b input {
+.question-container-1-b input, .question-container-2-b input {
     font: 15px 'Open Sans', sans-serif;
     width: 100%;
     height: 50px;
     padding-left: 5px;
 }
-.addFaq {
+.add-faq {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -85,13 +81,13 @@ tr>:nth-child(5) {
     transition: background-color 0.5s, color 0.5s,
                 border 0.5s;
 }
-.addFaq:hover {
+.add-faq:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color: #ed1c24;
     cursor: pointer;
 }
-.editFaq {
+.edit-faq {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -100,13 +96,13 @@ tr>:nth-child(5) {
     transition: background-color 0.5s, color 0.5s,
                 border 0.5s;
 }
-.editFaq:hover {
+.edit-faq:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color: #ed1c24;
     cursor: pointer;
 }
-.removeFaq {
+.remove-faq {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -115,13 +111,13 @@ tr>:nth-child(5) {
     transition: background-color 0.5s, color 0.5s,
                 border 0.5s; 
 }
-.removeFaq:hover {
+.remove-faq:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color: #ed1c24;
     cursor: pointer;
 }
-.addToTable {
+.add-to-table {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -133,14 +129,14 @@ tr>:nth-child(5) {
     top: -24px;
     left: 401px;
 }
-.addToTable:hover {
+.add-to-table:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color:#ed1c24;
     border-radius: 4px;
     cursor: pointer;
 }
-.editTable {
+.edit-table {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -152,14 +148,14 @@ tr>:nth-child(5) {
     top: -24px;
     left: 401px;
 }
-.editTable:hover {
+.edit-table:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color:#ed1c24;
     border-radius: 4px;
     cursor: pointer;
 }
-.closeAdding {
+.close-adding {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -171,15 +167,13 @@ tr>:nth-child(5) {
     top: 18px;
     left: 308px;
 }
-.closeAdding:hover {
+.close-adding:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color:#ed1c24;
     border-radius: 4px;
     cursor: pointer;
 }
-
-
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -188,6 +182,86 @@ tr>:nth-child(5) {
     'opsz' 7
     
   }
-
-
-
+.button-color {
+    color: #fff;
+}
+.my-select {
+    background-color: #ed1c24;
+    color: #fff;
+    border: 1px solid #ed1c24;
+    position: relative;
+    bottom: 65px;
+    left: 30px;
+    padding: 7px 2px;
+}
+.myOption {
+    background-color: #fff;
+    color: #ed1c24;
+    border: 1px solid #ed1c24;
+}
+.my-select:hover, .myOption:hover {
+    cursor: pointer;
+}
+.publish-validation {
+    display: none;
+    width: 320px;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    background-color: #fff ;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
+    right: 547px;
+    bottom: -147px;
+}
+.unpublish-validation {
+    display: none;
+    width: 320px;
+    position: absolute;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    background-color: #fff ;
+    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
+    right: 547px;
+    bottom: -147px;
+}
+.create-published-faq, .create-unpublished-faq, .update-published-faq, 
+.update-unpublished-faq {
+    display: none;
+    background-color: #ed1c24;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 4px 10px;
+    transition: background-color 0.5s, color 0.5s, border-raduis 0.5s,
+                border 0.5s;
+    position: relative;
+    top: 21px;
+    left: 160px;
+}
+.create-published-faq:hover, .create-unpublished-faq:hover, .update-published-faq:hover, 
+.update-unpublished-faq:hover {
+    background-color: #fff;
+    color: #ed1c24;
+    border-color:#ed1c24;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.return-to-container {
+    background-color: #ed1c24;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 4px 12px;
+    transition: background-color 0.5s, color 0.5s, border-raduis 0.5s,
+                border 0.5s;
+    position: relative;
+    bottom: 9px;
+    right: 29px;
+}
+.return-to-container:hover {
+    background-color: #fff;
+    color: #ed1c24;
+    border-color:#ed1c24;
+    border-radius: 4px;
+    cursor: pointer;
+}

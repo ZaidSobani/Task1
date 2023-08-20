@@ -1,141 +1,214 @@
 
 var faqs;
-var faqToEditIndex;
+var faqIndexToEdit;
+
 class Faq {
-    constructor(question, answer, ids) {
+    constructor(id, question, answer, published = false) {
+        this.id = id;
         this.question = question;
         this.answer = answer;
-        this.ids = ids;
+        this.published = published;
     }
 }
 
-window.onload = function() {
+window.onload = function () {
+
     faqStorage = localStorage.getItem("faqs");
 
-    if(faqs) {
+    if (faqs) {
+
         faqs = JSON.parse(faqStorage);
     }
     else {
-        faqs = new Array ();
-        faqs.push(new Faq("question1", "answer1", Math.random()));
-        faqs.push(new Faq("question2", "answer2", Math.random()));
-        faqs.push(new Faq("question3", "answer3", Math.random()));
+        var x = Math.random()
+        var y = Math.random()
+        var z = Math.random()
+        faqs = new Array();
+        faqs.push(new Faq(x, "question1", "answer1", true));
+        faqs.push(new Faq(y, "question2", "answer2", true));
+        faqs.push(new Faq(z, "question3", "answer3", true));
 
         localStorage.setItem("faqs", JSON.stringify(faqs));
     }
 
 
-    const faqsOutput = document.getElementById("faqTable1");
-    for(let i = 0; i < faqs.length; i++) {
-       faqsOutput.innerHTML = faqsOutput.innerHTML + buildFaqHtml(faqs[i], i);
-       deleteFaq(faqs[i],i)
+    const faqsOutput = document.getElementById("faqTable");
+
+    for (let i = 0; i < faqs.length; i++) {
+
+        faqsOutput.innerHTML = faqsOutput.innerHTML + buildFaqHtml(faqs[i], i);
+
     }
+
+    document.getElementById("displayPublish-" + x).innerHTML = "Published";
+    document.getElementById("displayPublish-" + y).innerHTML = "Published";
+    document.getElementById("displayPublish-" + z).innerHTML = "Published";
+    
 }
 
 function addFaq() {
-    document.getElementById("ques_container").style.display = "block";
+    document.getElementById("questionContainer").style.display = "block";
     document.getElementById("addToTable").style.display = "block";
     document.getElementById("editTable").style.display = "none";
 
-    document.getElementById("questions_field").value = "";
-    document.getElementById("answers_field").value = "";
+    document.getElementById("questionField").value = "";
+    document.getElementById("answerField").value = "";
 }
-function edit(index) {
-    faqToEditIndex = index;
-    faq = faqs[index];
 
-    document.getElementById("ques_container").style.display = "block";
+function edit(id) {
+    faqIndexToEdit = faqs.findIndex(faqObj => faqObj.id == id);
+    const faq = faqs[faqIndexToEdit];
+
+    document.getElementById("questionContainer").style.display = "block";
     document.getElementById("addToTable").style.display = "none";
     document.getElementById("editTable").style.display = "block";
 
-    document.getElementById("questions_field").value = faq.question;
-    document.getElementById("answers_field").value = faq.answer;
+    document.getElementById("questionField").value = faq.question;
+    document.getElementById("answerField").value = faq.answer;
+}
+
+function ifPublished() {
+    if (document.getElementById("mySelect").value == "publish") {
+        var input3 = true;
+        return input3;
+    }
+    else {
+        var input3 = false;
+        return input3;
+    }
+}
+function displayPublish(id) {
+    if(document.getElementById("mySelect").value == "publish") {
+        document.getElementById("displayPublish-" + id).innerHTML = "Published"
+    }
+    else {
+        document.getElementById("displayPublish-" + id).innerHTML = "Unpublished"
+    }
 }
 
 function createFaq() {
-    const input1 = document.getElementById("questions_field").value;
-    const input2 = document.getElementById("answers_field").value;
+    const input1 = document.getElementById("questionField").value;
+    const input2 = document.getElementById("answerField").value;
     const randomId = Math.random();
-    const faq = new Faq(input1, input2, randomId);
+    const faq = new Faq(randomId, input1, input2, ifPublished());
 
     faqs.push(faq);
 
-    const faqsOutput = document.getElementById("faqTable1");
+    const faqsOutput = document.getElementById("faqTable");
     faqsOutput.innerHTML = faqsOutput.innerHTML + buildFaqHtml(faq, (faqs.length - 1))
-    // faqOutput.innerHTML = faqOutput.innerHTML + "<tr id='test12' class='faqTable2'><td><span>" +faqs.length + 
-    // "</span></td><td><span [id]='x'>" + faqs[faqs.length - 1].question + 
-    // "</span></td><td><span id=''>" + faqs[faqs.length - 1].answer + 
-    // "</span></td><td><span><button onclick='edit()'>" + 
-    // "Edit" + "</button></span></td></tr>";
 
     localStorage.setItem("faqs", JSON.stringify(faqs));
+    
+    displayPublish(faq.id);
 
-    // function indexOfId() {
-    //     // id = "ques" +faqs.indexOf(faqs[faqs.length]);
-    //     var test131 = document.getElementsByTagName("tr");
-    //     for (var j= 0; j < test131.length; j++) {
-    //         var test13 = test131[j];
-    //         test13.setAttribute("id", j + 1);
-    //         test13.id = j+1;
-    //         return "id is" + test13.id;
-    //     }
-    // }    
-    // var x= setTimeout(indexOfId, 2000);
-    // console.log(setTimeout(indexOfId, 2000));
+    document.getElementById("questionContainer").style.display = "none";
+    document.getElementById("publishValidation").style.display = "none";
+    document.getElementById("unpublishValidation").style.display = "none";
+    document.getElementById("questionContainer").style.filter = "blur(0)";
 
-    document.getElementById("ques_container").style.display = "none";
-
-    //document.getElementById("bottomBorder").style.borderBottom = "none";    
 }
+
+function returnToContainer() {
+    document.getElementById("publishValidation").style.display = "none";
+    document.getElementById("unpublishValidation").style.display = "none";
+    document.getElementById("questionContainer").style.filter = "blur(0)";
+}
+
 function editFaq() {
-    const faq = faqs[faqToEditIndex];
-    faq.question = document.getElementById("questions_field").value;
-    faq.answer = document.getElementById("answers_field").value;              //no need to push replacing existing values
 
-    const faqOutput = document.getElementById("faq-" + faq.ids);
-    faqOutput.innerHTML = buildFaqInnerHtml(faq, faqToEditIndex);
+    const faq = faqs[faqIndexToEdit];
+    faq.question = document.getElementById("questionField").value;
+    faq.answer = document.getElementById("answerField").value;              //no need to push replacing existing values
+    faq.published = ifPublished()
     
+    const faqOutput = document.getElementById("faq-" + faq.id);
+    faqOutput.innerHTML = buildFaqInnerHtml(faq, faqIndexToEdit);
+
     localStorage.setItem("faqs", JSON.stringify(faqs));
 
-    document.getElementById("ques_container").style.display = "none";
+    displayPublish(faq.id);
+
+    document.getElementById("questionContainer").style.display = "none";
+    document.getElementById("publishValidation").style.display = "none";
+    document.getElementById("unpublishValidation").style.display = "none";
+    document.getElementById("questionContainer").style.filter = "blur(0)";
+
+    // if(faq.published == true) {
+    //     document.getElementById("mySelect").value = "publish";
+    // }
+    // else {
+    //     document.getElementById("mySelect").value = "unpublish";
+    // }
 }
 
-function removeFaq(removeIndex) {
-    
-    var faqIndex = faqs.findIndex(test => test.removeIndex === 0);
-    
+function removeFaq(id) {
 
-    const faq =faqs[faqIndex];
-    
-    const rowNumber = document.getElementById("faq-" + removeIndex);
-    rowNumber.remove()
-    
-    //const idsS = faq.ids;
+    const rowHtml = document.getElementById("faq-" + id);
+    rowHtml.remove();
 
-    
-    faqs.splice(faqIndex, 1);
-    console.log(faqIndex)
-    
+    const faqIndexToRemove = faqs.findIndex(faq => faq.id == id);
+    faqs.splice(faqIndexToRemove, 1);
+
     localStorage.setItem("faqs", JSON.stringify(faqs));
-    //document.getElementById("faqTable1").deleteRow(removeIndex + 1);
 }
 
 function closeFaq() {
-    document.getElementById("ques_container").style.display = "none";
+    document.getElementById("questionContainer").style.display = "none";
     document.getElementById("addToTable").style.display = "none";
     document.getElementById("editTable").style.display = "none";
 }
 
 function buildFaqHtml(faq, index) {
-    return "<tr id='faq-" + faq.ids + "' class='faqTable1' >" + buildFaqInnerHtml(faq, index) + "</tr>";
-}
-function buildFaqInnerHtml(faq, index) {
-    return "<td><span>" + (index + 1) + "</span></td><td><span>" + faq.question + "</span></td><td><span>" + faq.answer + 
-    "</span></td><td><span><button class='editFaq' onclick='edit("+ index +")'>" + "Edit" + 
-    "</button></span></td><td><span><button class='removeFaq' onclick='removeFaq("+ faq.ids +")'><span class='material-symbols-outlined'>" + 
-    "delete" + "</span></button></span></td>"; 
+
+    return "<tr id='faq-" + faq.id + "' class='faq-table' >" + buildFaqInnerHtml(faq, index) + "</tr>";
 }
 
-function deleteFaq(faq ,index) {
-    return index
+function buildFaqInnerHtml(faq, index) {
+
+    return "<td><span>" + faq.question + "</span></td><td><span>" + faq.answer +
+        "</span></td><td><span id='displayPublish-" + faq.id + "'></span></td><td><span><button class='edit-faq' onclick='edit(" + faq.id + ")'>" + "Edit" +
+        "</button></span></td><td><span><button class='remove-faq' onclick='removeFaq(" + faq.id + ")'><span class='material-symbols-outlined  button-color'>" +
+        "delete" + "</span></button></span></td>";
+}
+
+
+
+
+
+function createValidation() {
+    if(ifPublished()) {
+        document.getElementById("publishValidation").style.display = "block";
+        document.getElementById("createPublishedFaq").style.display = "block";
+        document.getElementById("updatePublishedFaq").style.display = "none";
+        document.getElementById("createUnpublishedFaq").style.display = "none";
+        document.getElementById("updateUnpublishedFaq").style.display = "none";
+        document.getElementById("questionContainer").style.filter = "blur(4px)";
+    }
+    else {
+        document.getElementById("unpublishValidation").style.display = "block";
+        document.getElementById("createUnpublishedFaq").style.display = "block";
+        document.getElementById("updateUnpublishedFaq").style.display = "none";
+        document.getElementById("createPublishedFaq").style.display = "none";
+        document.getElementById("updatePublishedFaq").style.display = "none";
+        document.getElementById("questionContainer").style.filter = "blur(4px)";
+    }
+}
+
+function updateValidation() {
+    if(ifPublished()) {
+        document.getElementById("publishValidation").style.display = "block";
+        document.getElementById("updatePublishedFaq").style.display = "block";
+        document.getElementById("createPublishedFaq").style.display = "none";
+        document.getElementById("updateUnpublishedFaq").style.display = "none";
+        document.getElementById("createUnpublishedFaq").style.display = "none";
+        document.getElementById("questionContainer").style.filter = "blur(4px)";
+    }
+    else {
+        document.getElementById("unpublishValidation").style.display = "block";
+        document.getElementById("updateUnpublishedFaq").style.display = "block";
+        document.getElementById("createUnpublishedFaq").style.display = "none";
+        document.getElementById("updatePublishedFaq").style.display = "none";
+        document.getElementById("createPublishedFaq").style.display = "none";
+        document.getElementById("questionContainer").style.filter = "blur(4px)";
+    }
 }
