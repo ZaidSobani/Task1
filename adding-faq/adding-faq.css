@@ -211,7 +211,7 @@ tr>:nth-child(5) {
     background-color: #fff ;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
     right: 547px;
-    bottom: -147px;
+    bottom: 50px;
 }
 .unpublish-validation {
     display: none;
@@ -222,7 +222,7 @@ tr>:nth-child(5) {
     background-color: #fff ;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
     right: 547px;
-    bottom: -147px;
+    bottom: 50px;
 }
 .create-published-faq, .create-unpublished-faq, .update-published-faq, 
 .update-unpublished-faq {
