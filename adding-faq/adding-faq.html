@@ -47,20 +47,22 @@
                 <div class="question-container-1-a">Question</div>
                 <div class="question-container-1-b">
                     <input type="text" id="questionField" placeholder="Question">
+                    <label for="questionField" id="questionLabel">You must write a question !!</label>
                 </div>
             </div>
             <div class="question-container-2">
                 <div class="question-container-2-a">Answer</div>
                 <div class="question-container-2-b">
-                    <input type="text" id="answerField" placeholder="Answer" >
+                    <input type="text" id="answerField" placeholder="Answer">
+                    <label for="answerField" id="answerLabel">write something !!</label>
                 </div>
             </div>
             <div>
                 <input type="button" class="close-adding" value="Close" onclick="closeFaq()">
             </div>
             <div>
-                <input type="button" id="addToTable" class="add-to-table"  value="Add" onclick="createValidation()">
-                <input type="button" id="editTable" class="edit-table"  value="Update" onclick="updateValidation()">
+                <input type="button" id="addToTable" class="add-to-table"  value="Add" onclick="createFaq()">
+                <input type="button" id="editTable" class="edit-table"  value="Update" onclick="editFaq()">
             </div>
             <span>
                 <select id="mySelect" class="my-select">
@@ -69,20 +71,13 @@
                 </select>
             </span>
         </div>
-        <div>
-            <div id="publishValidation" class="publish-validation">
-                <p>Are you sure you want to publish it ?</p>
-                <button type="button" id="createPublishedFaq" class="create-published-faq" onclick="createFaq()">Yes</button>
-                <button type="button" id="updatePublishedFaq" class="update-published-faq" onclick="editFaq()">Yes</button>
-                <button type="button" class="return-to-container" onclick="returnToContainer()">No</button>
-            </div> 
-            <div id="unpublishValidation" class="unpublish-validation">
-                <p>Are you sure you don't want to publish it ?</p>
-                <button type="button" id="createUnpublishedFaq" class="create-unpublished-faq" onclick="createFaq()">Yes</button>
-                <button type="button" id="updateUnpublishedFaq" class="update-unpublished-faq" onclick="editFaq()">Yes</button>
-                <button type="button" class="return-to-container" onclick="returnToContainer()">No</button>
-            </div> 
-        </div>
+
+        <div id="deleteValidation" class="delete-validation">
+            <p>Are you sure you want to delete it ?</p>
+            <button type="button" class="approve-validation" id="approveValidation">Yes</button>
+            <button type="button" class="close-validation" id="closeValidation">No</button>
+        </div> 
+    
     </div>
     
 

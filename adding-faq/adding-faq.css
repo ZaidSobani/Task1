@@ -52,9 +52,9 @@ tr>:nth-child(5) {
     border: 1px solid #dee2e6;
     background-color: #fff ;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 392px;
-
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -20%);
 }
 .question-container-1, .question-container-2 {
     margin: 26px 21px;
@@ -72,8 +72,16 @@ tr>:nth-child(5) {
     height: 50px;
     padding-left: 5px;
 }
+.question-container-1-b label, .question-container-2-b label {
+    display: none;
+    color: #ed1c24;
+    position: absolute;
+}
+/* .question-container-1-b input:invalid {
+    border: 2px solid #ed1c24;
+} */
 .add-faq {
-    background-color: #ed1c24;
+    background-color: #2d2828;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 9px;
@@ -83,12 +91,12 @@ tr>:nth-child(5) {
 }
 .add-faq:hover {
     background-color: #fff;
-    color: #ed1c24;
-    border-color: #ed1c24;
+    color: #2d2828;
+    border-color: #2d2828;
     cursor: pointer;
 }
 .edit-faq {
-    background-color: #ed1c24;
+    background-color: #2d2828;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 9px;
@@ -98,12 +106,12 @@ tr>:nth-child(5) {
 }
 .edit-faq:hover {
     background-color: #fff;
-    color: #ed1c24;
-    border-color: #ed1c24;
+    color: #2d2828;
+    border-color: #2d2828;
     cursor: pointer;
 }
 .remove-faq {
-    background-color: #ed1c24;
+    background-color: #fff;
     color: #fff;
     border: 1px solid #fff;
     border-radius: 9px;
@@ -183,7 +191,7 @@ tr>:nth-child(5) {
     
   }
 .button-color {
-    color: #fff;
+    color: #ed1c24;
 }
 .my-select {
     background-color: #ed1c24;
@@ -202,31 +210,20 @@ tr>:nth-child(5) {
 .my-select:hover, .myOption:hover {
     cursor: pointer;
 }
-.publish-validation {
+
+.delete-validation {
     display: none;
     width: 320px;
-    position: absolute;
     text-align: center;
     border: 1px solid #dee2e6;
     background-color: #fff ;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
-    right: 547px;
-    bottom: 50px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.unpublish-validation {
-    display: none;
-    width: 320px;
-    position: absolute;
-    text-align: center;
-    border: 1px solid #dee2e6;
-    background-color: #fff ;
-    box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
-    right: 547px;
-    bottom: 50px;
-}
-.create-published-faq, .create-unpublished-faq, .update-published-faq, 
-.update-unpublished-faq {
-    display: none;
+
+.approve-validation {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -235,18 +232,17 @@ tr>:nth-child(5) {
     transition: background-color 0.5s, color 0.5s, border-raduis 0.5s,
                 border 0.5s;
     position: relative;
-    top: 21px;
-    left: 160px;
+    bottom: 9px;
+    left: 58px;
 }
-.create-published-faq:hover, .create-unpublished-faq:hover, .update-published-faq:hover, 
-.update-unpublished-faq:hover {
+.approve-validation:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color:#ed1c24;
     border-radius: 4px;
     cursor: pointer;
 }
-.return-to-container {
+.close-validation {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -256,12 +252,13 @@ tr>:nth-child(5) {
                 border 0.5s;
     position: relative;
     bottom: 9px;
-    right: 29px;
+    right: 49px;
 }
-.return-to-container:hover {
+.close-validation:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color:#ed1c24;
     border-radius: 4px;
     cursor: pointer;
-}
+} 
+

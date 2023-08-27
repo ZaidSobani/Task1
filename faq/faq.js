@@ -20,6 +20,7 @@ window.onload = function () {
         }
         else {
             document.getElementById("faqsOutput-" + (i + 1)).style.display = "none"
+            //faqs.splice((i) , 1);
         }
     }
     
