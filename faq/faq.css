@@ -85,6 +85,18 @@ ul li span.faq-list-1-a {
     cursor: pointer;
 }
 
+.faq-border-none {
+    border: none;
+}
+.faq-border {
+    border: 1px solid #dee2e6;
+}
+.faq-margin {
+    margin-bottom: -100px;
+}
+.faq-margin-none {
+    margin-bottom: 0px;
+}
 
 .faq, .footer {
     float: left;

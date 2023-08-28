@@ -54,7 +54,8 @@ tr>:nth-child(5) {
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
     position: fixed;
     left: 50%;
-    transform: translate(-50%, -20%);
+    top: 50%;
+    transform: translate(-50%, -44%);
 }
 .question-container-1, .question-container-2 {
     margin: 26px 21px;
@@ -261,4 +262,8 @@ tr>:nth-child(5) {
     border-radius: 4px;
     cursor: pointer;
 } 
+
+.validation-border {
+    border: 2px solid #ed1c24;
+}
 
