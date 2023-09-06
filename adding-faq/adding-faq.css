@@ -45,7 +45,7 @@ tr>:nth-child(5) {
     width: 3%;
     text-align: center;
 }
-.question-container {
+.main-container {
     display: none;
     width: 500px;
     height: 330px;
@@ -57,30 +57,27 @@ tr>:nth-child(5) {
     top: 50%;
     transform: translate(-50%, -44%);
 }
-.question-container-1, .question-container-2 {
+.question-container, .answer-container {
     margin: 26px 21px;
 }
-.question-container-1-a, .question-container-2-a {
+.question-head, .answer-head {
     font-size: 22px;
     margin-bottom: 10px;
 }
-.question-container-2-a {
+.answer-head {
     margin-top: -10px;
 }
-.question-container-1-b input, .question-container-2-b input {
+.question-value input, .answer-value input {
     font: 15px 'Open Sans', sans-serif;
     width: 100%;
     height: 50px;
     padding-left: 5px;
 }
-.question-container-1-b label, .question-container-2-b label {
+.question-value label, .answer-value label {
     display: none;
     color: #ed1c24;
     position: absolute;
 }
-/* .question-container-1-b input:invalid {
-    border: 2px solid #ed1c24;
-} */
 .add-faq {
     background-color: #2d2828;
     color: #fff;
@@ -126,6 +123,22 @@ tr>:nth-child(5) {
     border-color: #ed1c24;
     cursor: pointer;
 }
+.button-container {
+   float: right;
+   width: 41%; 
+}
+.publish-container {
+    float: right;
+    width: 53%; 
+ }
+.edit-container {
+    float: left;
+    width: 58%;
+}
+.close-container {
+    float: left;
+    width: 42%;
+}
 .add-to-table {
     background-color: #ed1c24;
     color: #fff;
@@ -134,9 +147,9 @@ tr>:nth-child(5) {
     padding: 10px 23px;
     transition: background-color 0.5s, color 0.5s, border-raduis 0.5s,
                 border 0.5s;
-    position: relative;
+    /* position: relative;
     top: -24px;
-    left: 401px;
+    left: 401px; */
 }
 .add-to-table:hover {
     background-color: #fff;
@@ -153,9 +166,9 @@ tr>:nth-child(5) {
     padding: 10px 12px;
     transition: background-color 0.5s, color 0.5s, border-raduis 0.5s,
                 border 0.5s;
-    position: relative;
+    /* position: relative;
     top: -24px;
-    left: 401px;
+    left: 401px; */
 }
 .edit-table:hover {
     background-color: #fff;
@@ -172,9 +185,9 @@ tr>:nth-child(5) {
     padding: 10px 19px;
     transition: background-color 0.5s, color 0.5s, border-raduis 0.5s,
                 border 0.5s;
-    position: relative;
+    /* position: relative;
     top: 18px;
-    left: 308px;
+    left: 308px; */
 }
 .close-adding:hover {
     background-color: #fff;
@@ -183,24 +196,13 @@ tr>:nth-child(5) {
     border-radius: 4px;
     cursor: pointer;
 }
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 7
-    
-  }
-.button-color {
-    color: #ed1c24;
-}
 .my-select {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #ed1c24;
-    position: relative;
+    /* position: relative;
     bottom: 65px;
-    left: 30px;
+    left: 30px; */
     padding: 7px 2px;
 }
 .myOption {
@@ -212,7 +214,19 @@ tr>:nth-child(5) {
     cursor: pointer;
 }
 
-.delete-validation {
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 7
+    
+  }
+.button-color {
+    color: #ed1c24;
+}
+
+.delete-confirmation {
     display: none;
     width: 320px;
     text-align: center;
@@ -224,7 +238,7 @@ tr>:nth-child(5) {
     transform: translate(-50%, -50%);
 }
 
-.approve-validation {
+.approve-confirmation {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -236,14 +250,14 @@ tr>:nth-child(5) {
     bottom: 9px;
     left: 58px;
 }
-.approve-validation:hover {
+.approve-confirmation:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color:#ed1c24;
     border-radius: 4px;
     cursor: pointer;
 }
-.close-validation {
+.close-confirmation {
     background-color: #ed1c24;
     color: #fff;
     border: 1px solid #fff;
@@ -255,7 +269,7 @@ tr>:nth-child(5) {
     bottom: 9px;
     right: 49px;
 }
-.close-validation:hover {
+.close-confirmation:hover {
     background-color: #fff;
     color: #ed1c24;
     border-color:#ed1c24;

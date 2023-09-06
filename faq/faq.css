@@ -27,65 +27,63 @@ h1 span.faq-heading {
 
 div.faq ul li {
     list-style-type: none;
-    border: none;
-    width: 538px;
-    height: 200px;
+    
 }
-.list {
-    border: none;
-    margin-bottom: -100px;
-    transition: margin-bottom 0.25s;
-}
-ul li span.faq-list {
+.question-output {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     color: #fff;
     background-color: #000;
-    padding-top: 2px;
-    padding-bottom: 45px;
-    padding-right: 35px;
+    display: flex;
+    height: auto;
+    min-height: 55px;
+    width: 584px;
+    padding-top: 8px;
+    margin-bottom: 20px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    display: flex;
 }
-ul li span.faq-list-1 {
-    position: relative;
-    top: 16px;
+.question-container {
+    float: left;
+    width: 95%;
 }
-ul li span.faq-list-1-a {
+.counter {
     color: #ed1c24; 
     font-size: 18px;
     padding-left: 20px;
     padding-right: 10px;
 }
-.faq-answer {
-    display: none;
-    padding: 0 16px;
-    margin-top: -10px; 
-}
-.click-a {
-    color: #ed1c24;
-    font-size: 20px;
+.button-container {
+    float: left;
+    width: 5%;
     position: relative;
-    left: 500px;
-    bottom: 84px;
 }
-.click-a:hover {
+.expand-button {
+    color: #ed1c24;
+    font-size: 22px;
+    position: absolute;
+}
+.collapse-button {
+    display: none;
+    color: #ed1c24;
+    font-size: 22px;
+}
+.expand-button:hover, .collapse-button:hover {
     cursor: pointer;
 }
-.click-b {
-    color: #ed1c24;
-    font-size: 20px;
+.answer-output {
     display: none;
-    position: relative;
-    left: 500px;
-    bottom: 184px;
-}
-.click-b:hover {
-    cursor: pointer;
+    width: 584px;
+    height: auto;
+    min-height: 100px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    border: 1px solid #dee2e6;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
-.faq-border-none {
+/* .faq-border-none {
     border: none;
 }
 .faq-border {
@@ -96,7 +94,7 @@ ul li span.faq-list-1-a {
 }
 .faq-margin-none {
     margin-bottom: 0px;
-}
+} */
 
 .faq, .footer {
     float: left;

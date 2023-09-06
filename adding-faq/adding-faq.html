@@ -42,40 +42,44 @@
     </div>
 
     <div id="container">
-        <div id="questionContainer" class="question-container">
-            <div class="question-container-1">
-                <div class="question-container-1-a">Question</div>
-                <div class="question-container-1-b">
+        <div id="questionContainer" class="main-container">
+            <div class="question-container">
+                <div class="question-head">Question</div>
+                <div class="question-value">
                     <input type="text" id="questionField" placeholder="Question">
                     <label for="questionField" id="questionLabel">You must write a question !!</label>
                 </div>
             </div>
-            <div class="question-container-2">
-                <div class="question-container-2-a">Answer</div>
-                <div class="question-container-2-b">
+            <div class="answer-container">
+                <div class="answer-head">Answer</div>
+                <div class="answer-value">
                     <input type="text" id="answerField" placeholder="Answer">
                     <label for="answerField" id="answerLabel">write something !!</label>
                 </div>
             </div>
             <div>
-                <input type="button" class="close-adding" value="Close" onclick="closeFaq()">
+                <div class="button-container">
+                    <div class="close-container">
+                        <input type="button" class="close-adding" value="Close" onclick="closeFaq()">
+                    </div>
+                    <div class="edit-container">
+                        <input type="button" id="addToTable" class="add-to-table"  value="Add" onclick="createFaq()">
+                        <input type="button" id="editTable" class="edit-table"  value="Update" onclick="updateFaq()">
+                    </div>
+                </div>
+                <div class="publish-container">
+                    <select id="mySelect" class="my-select">
+                        <option class="myOption" value="1">Publish</option>
+                        <option class="myOption" value="0">Unpublish</option>
+                    </select>
+                </div>
             </div>
-            <div>
-                <input type="button" id="addToTable" class="add-to-table"  value="Add" onclick="createFaq()">
-                <input type="button" id="editTable" class="edit-table"  value="Update" onclick="editFaq()">
-            </div>
-            <span>
-                <select id="mySelect" class="my-select">
-                    <option class="myOption" value="1">Publish</option>
-                    <option class="myOption" value="0">Unpublish</option>
-                </select>
-            </span>
         </div>
 
-        <div id="deleteValidation" class="delete-validation">
+        <div id="deleteConfirmation" class="delete-confirmation">
             <p>Are you sure you want to delete it ?</p>
-            <button type="button" class="approve-validation" id="approveValidation">Yes</button>
-            <button type="button" class="close-validation" id="closeValidation">No</button>
+            <button type="button" class="approve-confirmation" id="approveConfirmation">Yes</button>
+            <button type="button" class="close-confirmation" onclick="closeConfirmation()">No</button>
         </div> 
     
     </div>
