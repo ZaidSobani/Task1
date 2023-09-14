@@ -3,15 +3,15 @@
     background-color: #fff;
     color: #707070;
     width: 100%;
-    height: 1350px;
+    overflow: auto;
     font: 15px 'Open Sans', sans-serif;
+    padding: 155px 0px;
 }
 .product h1 {
     font: 39.056px 'Montserrat', sans-serif;
     font-weight: 600;
     color: #000;
     text-align: center;
-    margin-top: 155px;
 }
 .product h1 span {
     color: #ed1c24; 
@@ -22,67 +22,92 @@
     font-weight: 300;
     text-align: center;
 }
-.product div ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.product-container {
+    width: 100%;
 }
-.product div ul li {
+.product-list-float {
     float: left;
+    width: 19%;
+}
+.product-img {
+    max-width: 100%;
+    height: auto;
+}
+.product-container ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.product-container ul li {
     list-style-type: none;
     border: 1px solid #dee2e6;
     border-radius: 4px;
-    width: 253px;
+    /* width: 253px; */
     height: 425px;
-    margin: 40px 20px -20px 20px;
+    margin: 40px 20px 0px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
 }
-.product div ul li span {
-    text-align: center;
+.product-container ul li span {
     font: 16px 'Montserrat', sans-serif;
     font-weight: 600;
     color: #000;
 }
-ul li span.product1 {
-    position: relative;
+.product-container ul li div  {
+    text-align: center;
+}
+.product-title {
+    /* position: relative;
     left: 60px;
-    top: 13px;
+    top: 13px; */
+    display: flex;
+    justify-content: center;
 }
-ul li span.product2 {
-    position: relative;
+.product-price {
+    /* position: relative;
     left: 66px;
-    top: 13px;
+    top: 13px; */
+    display: flex;
+    justify-content: center;
 }
-ul li span.product2-a {
+.old-price {
     font-size: 13px; 
     opacity: 0.5; 
     text-decoration: line-through;
 }
-ul li span.product2-b {
+.new-price {
     font-size: 18.75px; 
     font-weight: bold;
 }
-
-ul li span.product3 {
+.product-button {
     border: 1px solid #ed1c24;
     border-radius: 4px;
     background-color: #ed1c24;
     color: #fff;
     padding: 8px 25px;
-    position: relative;
+    /* position: relative;
     top: 35px;
-    left: 66px;
-
-}
-ul li span.hover1, ul li span.hover2, ul li span.hover3, ul li span.hover4, ul li span.hover5,  
-ul li span.hover6 {
+    left: 66px; */
     transition: background-color 0.4s, color 0.4s, border-radius 0.4s;
 }
-ul li span.hover1:hover, ul li span.hover2:hover, ul li span.hover3:hover, ul li span.hover4:hover, 
-ul li span.hover5:hover, ul li span.hover6:hover  {
+.product-button:hover {
     background-color: #fff;
     color: #ed1c24;
     border-radius: 20px;
     cursor:pointer;
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+    .product-list-float {
+        width: 32%;
+    }
+}
+@media screen and (max-width:600px) {
+    .product-list-float {
+        width: 48%;
+    }
 }
 
 .product, .footer {

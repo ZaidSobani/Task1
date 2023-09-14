@@ -3,8 +3,14 @@
     font: 15px 'Open Sans', sans-serif;
     color: #000;
 }
+.faq-container {
+    padding: 140px 0px;
+}
+.table-overflow {
+    overflow-x: auto;
+    overflow-y: auto;
+}
 .faq-table {
-    margin-top: 150px;
     width: 85%;
     margin-left: auto;
     margin-right: auto;
@@ -30,9 +36,11 @@ td {
 }
 tr>:nth-child(1) {
     width: 45%;
+    min-width: 250px;
 }
 tr>:nth-child(2) {
     width: 45%;
+    min-width: 250px;
 }
 tr>:nth-child(3) {
     width: 4%;
@@ -45,17 +53,22 @@ tr>:nth-child(5) {
     width: 3%;
     text-align: center;
 }
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main-container {
     display: none;
-    width: 500px;
-    height: 330px;
+    width: 36%;
+    height: 60%;
     border: 1px solid #dee2e6;
     background-color: #fff ;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -44%);
+    min-width: 400px;
+    max-height: 350px;
+    overflow-x: auto;
 }
 .question-container, .answer-container {
     margin: 26px 21px;
@@ -123,21 +136,27 @@ tr>:nth-child(5) {
     border-color: #ed1c24;
     cursor: pointer;
 }
+.flex-button-container {
+    display: flex;
+    justify-content: space-between;
+}
 .button-container {
-   float: right;
-   width: 41%; 
+   float: left;
+   width: 44%; 
+   display: flex;
+   justify-content: space-between;
 }
 .publish-container {
-    float: right;
-    width: 53%; 
+    float: left;
+    width: 50%; 
  }
 .edit-container {
     float: left;
-    width: 58%;
+    width: 55%;
 }
 .close-container {
     float: left;
-    width: 42%;
+    width: 39%;
 }
 .add-to-table {
     background-color: #ed1c24;
@@ -204,6 +223,7 @@ tr>:nth-child(5) {
     bottom: 65px;
     left: 30px; */
     padding: 7px 2px;
+    margin-left: 21px;
 }
 .myOption {
     background-color: #fff;
@@ -233,9 +253,9 @@ tr>:nth-child(5) {
     border: 1px solid #dee2e6;
     background-color: #fff ;
     box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.4);
-    position: fixed;
+    /* position: fixed;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .approve-confirmation {

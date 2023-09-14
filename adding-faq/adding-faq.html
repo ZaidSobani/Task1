@@ -1,92 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>ProLex Product</title>
-    <link rel="icon" type="img/x-icon" href="../shared/images/favicon.png">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>ProLex Product</title>
+        <link rel="icon" type="img/x-icon" href="../shared/images/favicon.png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../shared/header.css">
-    <link rel="stylesheet" href="../shared/footer.css">
-    <link rel="stylesheet" href="adding-faq.css">
+        <link rel="stylesheet" href="../shared/header.css">
+        <link rel="stylesheet" href="../shared/footer.css">
+        <link rel="stylesheet" href="adding-faq.css">
 
-    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 
-</head>
+    </head>
 
-<body>
-    <div>
-        <ul class="header">
-            <li class="list-login"><a href="../log-in/log-in.html">Log in</a></li>
-            <li class="list-contact-us"><a href="../contact-us/contact-us.html">Contact Us</a></li>
-            <li><a href="../faq/faq.html">Faq</a></li>
-            <li><a href="../product/product.html">Products</a></li>
-            <li><a href="../index.html">Home</a></li>
-            <li class="list-logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
-        </ul>
-    </div>
-
-    <div id="faqs">
-        <table id="faqTable" class="faq-table">
-            <tr>
-                <th>Question</th>
-                <th>Answer</th>
-                <th>
-                    <input type="button" value="+" class="add-faq" onclick="addFaq()">
-                </th>
-            </tr>
-        </table>
-    </div>
-
-    <div id="container">
-        <div id="questionContainer" class="main-container">
-            <div class="question-container">
-                <div class="question-head">Question</div>
-                <div class="question-value">
-                    <input type="text" id="questionField" placeholder="Question">
-                    <label for="questionField" id="questionLabel">You must write a question !!</label>
-                </div>
-            </div>
-            <div class="answer-container">
-                <div class="answer-head">Answer</div>
-                <div class="answer-value">
-                    <input type="text" id="answerField" placeholder="Answer">
-                    <label for="answerField" id="answerLabel">write something !!</label>
-                </div>
-            </div>
-            <div>
-                <div class="button-container">
-                    <div class="close-container">
-                        <input type="button" class="close-adding" value="Close" onclick="closeFaq()">
+    <body>
+        <div>
+            <ul class="header">
+                <div class="main-header">
+                    <div class="logo-header">
+                        <div class="logo-part">
+                            <li><img src="../shared/images/logoN.png" alt="PL" width="100px" height="auto"></li>
+                        </div>   
+                        <div class="menu-navigation-part">
+                            <li id="openMenu">
+                                <button onclick="openMenu()" class="open-menu">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </li>
+                            <li id="closeMenu">
+                                <button onclick="closeMenu()" class="close-menu">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </li>
+                        </div>
                     </div>
-                    <div class="edit-container">
-                        <input type="button" id="addToTable" class="add-to-table"  value="Add" onclick="createFaq()">
-                        <input type="button" id="editTable" class="edit-table"  value="Update" onclick="updateFaq()">
+                    <div class="navigation-header" id="navigationHeader">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../product/product.html">Products</a></li>
+                        <li><a href="../faq/faq.html">Faq</a></li>
+                        <li><a href="../contact-us/contact-us.html">Contact Us</a></li>
                     </div>
                 </div>
-                <div class="publish-container">
-                    <select id="mySelect" class="my-select">
-                        <option class="myOption" value="1">Publish</option>
-                        <option class="myOption" value="0">Unpublish</option>
-                    </select>
+                <div class="log-in-header">
+                    <li><a href="../log-in/log-in.html">Log in</a></li>
+                </div>        
+            </ul>
+        </div> 
+
+        <div class="faq-container">
+            <div id="faqs" class="table-overflow">
+                <table id="faqTable" class="faq-table">
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                        <th>
+                            <input type="button" value="+" class="add-faq" onclick="addFaq()">
+                        </th>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="container">
+                <div class="flex-container">
+                    <div id="questionContainer" class="main-container">
+                        <div class="question-container">
+                            <div class="question-head">Question</div>
+                            <div class="question-value">
+                                <input type="text" id="questionField" placeholder="Question">
+                                <label for="questionField" id="questionLabel">You must write a question !!</label>
+                            </div>
+                        </div>
+                        <div class="answer-container">
+                            <div class="answer-head">Answer</div>
+                            <div class="answer-value">
+                                <input type="text" id="answerField" placeholder="Answer">
+                                <label for="answerField" id="answerLabel">write something !!</label>
+                            </div>
+                        </div>
+                        <div class="flex-button-container">
+                            <div class="publish-container">
+                                <select id="mySelect" class="my-select">
+                                    <option class="myOption" value="1">Publish</option>
+                                    <option class="myOption" value="0">Unpublish</option>
+                                </select>
+                            </div>
+                            <div class="button-container">
+                                <div class="close-container">
+                                    <input type="button" class="close-adding" value="Close" onclick="closeFaq()">
+                                </div>
+                                <div class="edit-container">
+                                    <input type="button" id="addToTable" class="add-to-table"  value="Add" onclick="createFaq()">
+                                    <input type="button" id="editTable" class="edit-table"  value="Update" onclick="updateFaq()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="flex-container">
+                    <div id="deleteConfirmation" class="delete-confirmation">
+                        <p>Are you sure you want to delete it ?</p>
+                        <button type="button" class="approve-confirmation" id="approveConfirmation">Yes</button>
+                        <button type="button" class="close-confirmation" onclick="closeConfirmation()">No</button>
+                    </div> 
+                </div>
+
             </div>
         </div>
 
-        <div id="deleteConfirmation" class="delete-confirmation">
-            <p>Are you sure you want to delete it ?</p>
-            <button type="button" class="approve-confirmation" id="approveConfirmation">Yes</button>
-            <button type="button" class="close-confirmation" onclick="closeConfirmation()">No</button>
-        </div> 
-    
-    </div>
-    
+        <script src="adding-faq.js"></script>
 
-    <script src="adding-faq.js"></script>
-
-</body>
+    </body>
 
 </html>

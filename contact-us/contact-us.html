@@ -12,6 +12,7 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
         
     </head>
@@ -19,51 +20,78 @@
     <body>
         <div>
             <ul class="header">
-                <li class="list-login"><a href="../log-in/log-in.html">Log in</a></li>
-                <li class="list-contact-us"><a href="../contact-us/contact-us.html">Contact Us</a></li>
-                <li><a href="../faq/faq.html">Faq</a></li>
-                <li><a href="../product/product.html">Products</a></li>
-                <li><a href="../index.html">Home</a></li>
-                <li class="list-logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
+                <div class="main-header">
+                    <div class="logo-header">
+                        <div class="logo-part">
+                            <li><img src="../shared/images/logoN.png" alt="PL" width="100px" height="auto"></li>
+                        </div>   
+                        <div class="menu-navigation-part">
+                            <li id="openMenu">
+                                <button onclick="openMenu()" class="open-menu">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </li>
+                            <li id="closeMenu">
+                                <button onclick="closeMenu()" class="close-menu">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="navigation-header" id="navigationHeader">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../product/product.html">Products</a></li>
+                        <li><a href="../faq/faq.html">Faq</a></li>
+                        <li><a href="../contact-us/contact-us.html">Contact Us</a></li>
+                    </div>
+                </div>
+                <div class="log-in-header">
+                    <li><a href="../log-in/log-in.html">Log in</a></li>
+                </div>        
             </ul>
-        </div>
-        <div class="contact">
-            <div class="contact_1">
-                <h1 class="contact_head1">Contact with us</h1>
-                <p class="contact_par1">It's very easy to get in touch with us. Just use the contact form <br>
-                    or pay us a visit for a coffee at the office. Dynamically innovate <br>
+        </div> 
+
+        <div class="contact-container">
+            <div class="contact-section-one">
+                <h1 class="section-one-head">Contact with us</h1>
+                <p class="section-one-paragraph-one">It's very easy to get in touch with us. Just use the contact form 
+                    or pay us a visit for a coffee at the office. Dynamically innovate
                     competitive technology after an expanded array of leadership.</p>
-                <p class="contact_par2"><span>Head Office</span><br>
+                <p class="section-one-paragraph-two"><span>Head Office</span><br>
                     121 King St, Melbourne VIC 3000, Australia</p>
-                <p class="contact_par3">Phone: +61 2 8376 6284 <br>
+                <p class="section-one-paragraph-three">Phone: +61 2 8376 6284 <br>
                    <span>Email : hello@yourdomain.com</span></p>
             </div>
-            <div class="contact_2">
-                <h1 class="contact_head2">Reach us quickly</h1>
-                <div class="contact_main_form">
-                    <div class="contact_main_form_1">
-                        <form>
-                            <input type="text" id="ename" name="ename" placeholder="Enter name">
-                        </form>
+            <div class="contact-section-two">
+                <h1 class="section-two-head">Reach us quickly</h1>
+                <div class="section-two-main-form">
+                    <div class="main-form-container">
+                        <div class="main-form-one">
+                            <form>
+                                <input type="text" placeholder="Enter name">
+                            </form>
+                        </div>
+                        <div class="main-form-two">
+                            <form>
+                                <input type="text" placeholder="Enter email">
+                            </form> <br>
+                        </div>
                     </div>
-                    <div class="contact_main_form_2">
-                        <form>
-                            <input type="text" id="eemail" name="eemail" placeholder="Enter email">
-                        </form> <br>
-                    </div>
-                    <div class="contact_main_form_1">
-                        <form>
-                            <input type="text" id="yphone" name="yphone" placeholder="Your Phone">
-                        </form>
-                    </div>
-                    <div class="contact_main_form_2">
-                        <form>
-                            <input type="text" id="ycompany" name="ycompany" placeholder="Your Company">
-                        </form> <br>
+                    <div class="main-form-container">
+                        <div class="main-form-one">
+                            <form>
+                                <input type="text" placeholder="Your Phone">
+                            </form>
+                        </div>
+                        <div class="main-form-two">
+                            <form>
+                                <input type="text" placeholder="Your Company">
+                            </form> <br>
+                        </div>
                     </div>
                     <div>
                         <form>
-                            <textarea id="mess" name="mess" rows="8" cols="51" placeholder="Message"></textarea>
+                            <textarea rows="8" cols="51" placeholder="Message"></textarea>
                         </form>
                     </div>
                 </div>
@@ -73,5 +101,8 @@
         <div class="footer">
             <p>Copyrights © 2019. All rights reserved by <span>ThemeTags</span></p>
         </div>
+
+        <script src="../shared/shared.js"></script>
+
     </body>
 </html>

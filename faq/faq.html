@@ -12,31 +12,56 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
 
     </head>
 
     <body>
         <div>
             <ul class="header">
-                <li class="list-login"><a href="../log-in/log-in.html">Log in</a></li>
-                <li class="list-contact-us"><a href="../contact-us/contact-us.html">Contact Us</a></li>
-                <li><a href="../faq/faq.html">Faq</a></li>
-                <li><a href="../product/product.html">Products</a></li>
-                <li><a href="../index.html">Home</a></li>
-                <li class="list-logo"><img src="../shared/images/logoN.png" alt="PL" width="120px" height="auto"></li>
+                <div class="main-header">
+                    <div class="logo-header">
+                        <div class="logo-part">
+                            <li><img src="../shared/images/logoN.png" alt="PL" width="100px" height="auto"></li>
+                        </div>   
+                        <div class="menu-navigation-part">
+                            <li id="openMenu">
+                                <button onclick="openMenu()" class="open-menu">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </li>
+                            <li id="closeMenu">
+                                <button onclick="closeMenu()" class="close-menu">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </li>
+                        </div>
+                    </div>
+                    <div class="navigation-header" id="navigationHeader">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../product/product.html">Products</a></li>
+                        <li><a href="../faq/faq.html">Faq</a></li>
+                        <li><a href="../contact-us/contact-us.html">Contact Us</a></li>
+                    </div>
+                </div>
+                <div class="log-in-header">
+                    <li><a href="../log-in/log-in.html">Log in</a></li>
+                </div>        
             </ul>
-        </div>
+        </div> 
        
         <div class="faq">
-            <div class="half-faq">
-                <img src="../faq/images/watch4.png" alt="watch" width="445px" height="auto">
-            </div>
-            
-            <div class="half-faq">
-                <h1>Fffrequently asked <span class="faq-heading">Questions</span></h1>
-                <ul id="faqOutput">
-                    
-                </ul>
+            <div class="faq-container">
+                <div class="faq-section-one">
+                    <img class="faq-img" src="../faq/images/watch4.png" alt="watch">
+                </div>
+                
+                <div class="faq-section-two">
+                    <h1>Fffrequently asked <span class="faq-heading">Questions</span></h1>
+                    <ul id="faqOutput">
+                        
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="footer">
@@ -45,6 +70,6 @@
 
 
         <script src="faq.js"></script>
-
+        <script src="../shared/shared.js"></script>
     </body>
 </html>

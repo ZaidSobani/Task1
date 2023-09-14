@@ -7,43 +7,120 @@ body {
 }
 
 ul.header { 
-    list-style-type: none;
-    overflow: hidden;
-    position: fixed;
-    padding: 0;
-    /*background-color: black;*/
-    background-color: #000;
-    top: 0;
-    left: 0;
+    display: flex;
     width: 100%;
+    list-style-type: none;
+    position: fixed;
+    background-color: #000;
     margin: 0;
+    padding-inline-start: 17px;
     z-index: 1;
- }
+}
+.main-header {
+    float: left;
+    width: 50%;
+}
+.log-in-header {
+    float: left;
+    width: 50%;
+}
+.navigation-header {
+    float: left;
+    width: 80%;
+}
+.logo-header {
+    float: left;
+    width: 20%;
+    margin-top: 18px;
+}
+.logo-part {
+    float: left;
+}
+.menu-navigation-part {
+    display: none;
+    float: left;
+    width: 9%;
+}
+.log-in-header li {
+    display: flex;
+    flex-direction: row-reverse;
+    font: 15px 'Open Sans', sans-serif;
+    padding: 20px 35px;
+    opacity: 0.7;
+}
+.navigation-header li {
+    float: left;
+    color: #fff;
+    font: 15px 'Open Sans', sans-serif;
+    padding: 20px 20px;
+    opacity: 0.7;
+}
+.menu-navigation-part li {
+    float: left;
+    color: #fff;
+    font: 15px 'Open Sans', sans-serif;
+    position: relative;
+    padding: 0px 20px;
+    opacity: 0.7;
+}
+.open-menu,.close-menu {
+    background-color: #000;
+    color: #fff;
+    border: none;  
+}
+.open-menu:hover, .close-menu:hover {
+    cursor: pointer;
+}
+#closeMenu {
+    display: none;
+}
+ul.header li a {
+    display:block;
+    text-decoration: none; 
+    color: #fff;
+}
 
- ul.header li {
-     float: right;
-     color: #fff;
-     opacity: 0.7;
-     font: 15px 'Open Sans', sans-serif;
- }
-                                                                 
- ul.header li a {
-     display:block;
-     text-decoration: none;
-     text-align: center;
-     color: #fff;
-     padding: 20px 20px;
- }
- ul.header li.list-logo {
-     float: left;
-     position: relative;
-     top: 15px;
-     left: 121px;
-     opacity: 1;
- }
- ul.header li.list-contact-us {
-    margin-right: 65px;
- }
- ul.header li.list-login {
-    margin-right: 10px;
- }
+
+
+@media screen and (min-width:800px) and (max-width:1000px) {
+    .main-header {
+        width: 60%;
+    }
+    .log-in-header {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-header {
+        width: 65%;
+    }
+    .log-in-header {
+        width: 35%;
+    }
+    .navigation-header {
+        display: none;
+    }
+    .logo-header {
+        width: 50%; 
+    }
+    .menu-navigation-part {
+        display: block;
+    }
+    .navigation-header li {
+        float: none;
+        padding: 10px 20px;
+    }
+   
+}
+
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20
+  }
+
