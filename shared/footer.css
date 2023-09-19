@@ -6,6 +6,10 @@
     height: 69.5px;
     font: 14px 'Open Sans', sans-serif;
     text-align: center;
+    position: relative;
+    bottom: 0px;
+
+    margin-top: auto;
 }
 .footer p {
     position: relative;

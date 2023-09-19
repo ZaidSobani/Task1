@@ -1,4 +1,7 @@
 
+.background-of-page {
+    background-color: #f4f4f4;
+}
 .contact-container {
     background-color: #f4f4f4;
     color: #707070;
@@ -92,6 +95,7 @@ form textarea {
     }
     .contact-section-one {
         width: 100%;
+        margin-bottom: 40px;
     }
     .contact-section-two {
         width: 100%;
@@ -100,7 +104,7 @@ form textarea {
 @media screen and (max-width:600px) {
     .contact-container {
         flex-direction: column;
-        padding: 120px 40px;
+        padding: 90px 40px;
     }
     .contact-section-one {
         width: 100%;
