@@ -45,7 +45,7 @@ app.put('/api/faq/:faqID', (req, res) => {
     const { id, question, answer } = req.body
     const UpdatedDate = new Date().toISOString().slice(0, 19).replace('T', ' ')
 
-    db.query('UPDATE faq SET question=?,answer=?,last_updated_date_time=? WHERE id=?',
+    db.query('UPDATE faq SET question=COALESCE(NULLIF(?,""),question),answer=COALESCE(NULLIF(?,""),answer),last_updated_date_time=? WHERE id=?',
         [question, answer, UpdatedDate, faqID], (err, result) => {
             if (err) throw err
 
@@ -57,8 +57,6 @@ app.put('/api/faq/:faqID', (req, res) => {
 
         })
 })
-
-
 
 app.delete('/api/faq/:faqID', (req, res) => {
     const { faqID } = req.params

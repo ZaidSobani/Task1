@@ -28,7 +28,7 @@ app.post('/api/category', (req, res) => {
             res.status(201).json({ success: true, category: name })
         })
 
-    if (!name) {
+    if (!name || !price || !discount_price) {
         res.status(400).json({ success: false, msg: 'Please provide Category name' })
     }
 })
@@ -44,7 +44,9 @@ app.put('/api/category/:CategoryID', (req, res) => {
             if (result.affectedRows == 0) {
                 return res.status(400).json({ success: false, msg: "recored not founded" })
             }
-            res.status(201).json({ success: true, msg: `The record with id= ${CategoryID} has been updated` })
+            if (name) {
+                res.status(201).json({ success: true, msg: `The record with id= ${CategoryID} has been updated` })
+            }
         })
 })
 
